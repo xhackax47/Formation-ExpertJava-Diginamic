@@ -29,6 +29,12 @@ public class Main {
 		System.out.println("VERIFICATION EGALITE POINTS p & p3");
 		System.out.println(p3.equals(p));
 		System.out.println("");
+		
+		// CARRE
+		Carre c = new Carre(p, 20);
+		System.out.println("OBJET c");
+		System.out.println("");
+		c.affiche();
 
 		// RONDS
 		Rond r = new Rond(p, 5);
@@ -79,8 +85,12 @@ public class Main {
 		System.out.println("");
 		
 		// GENERATION ALEATOIRE D'OBJETS
-		System.out.println(FigureUtil.getRandomRond());
-		System.out.println(FigureUtil.getRandomRectangle());
+		Rond r4 = FigureUtil.getRandomRond();
+		System.out.println("Voici le rond généré :");
+		r4.affiche();
+		Rectangle rg4 = FigureUtil.getRandomRectangle();
+		System.out.println("Voici le rectangle généré :");
+		rg4.affiche();
 	}
 
 }
