@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
-		// POINT
+		// POINTS
 		Point p = new Point(10, 10);
 		System.out.println("OBJET p");
 		System.out.println("");
@@ -30,7 +30,7 @@ public class Main {
 		System.out.println(p3.equals(p));
 		System.out.println("");
 
-		// ROND
+		// RONDS
 		Rond r = new Rond(p, 5);
 		System.out.println("OBJET r");
 		System.out.println("");
@@ -53,7 +53,7 @@ public class Main {
 		System.out.println(r3.equals(r));
 		System.out.println("");
 		
-		// RECTANGLE
+		// RECTANGLES
 		Rectangle rg = new Rectangle(p,15,20);
 		System.out.println("OBJET rg");
 		System.out.println("");
