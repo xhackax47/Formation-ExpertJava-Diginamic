@@ -17,12 +17,16 @@ public class Carre {
 		Point pointHautDroit = new Point(pointBasGauche.getX() + cote, pointBasGauche.getY() + cote);
 		Point pointHautGauche = new Point(pointBasGauche.getX() + cote, pointBasGauche.getY());
 		
-		String Bdroit = "Carre [point=" + pointBasDroit + ", cote=" + cote + "]";
-		String Hdroit = "Carre [point=" + pointHautDroit + ", cote=" + cote + "]";
-		String Bgauche = "Carre [point=" + pointBasGauche + ", cote=" + cote + "]";
-		String Hgauche = "Carre [point=" + pointHautGauche + ", cote=" + cote + "]";
+		String Bdroit = "[point=" + pointBasDroit + ", cote=" + cote + "]";
+		String Hdroit = "[point=" + pointHautDroit + ", cote=" + cote + "]";
+		String Bgauche = "[point=" + pointBasGauche + ", cote=" + cote + "]";
+		String Hgauche = "[point=" + pointHautGauche + ", cote=" + cote + "]";
 		
-		return Bdroit + Hdroit + Bgauche + Hgauche;
+		return "[" + getType() + " " + Bdroit + Hdroit + Bgauche + Hgauche + "]";
+	}
+	
+	protected String getType() {
+		return "CARRE";
 	}
 	
 	public void affiche() {

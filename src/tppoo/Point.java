@@ -36,7 +36,7 @@ public class Point implements Cloneable {
 	
 	@Override
 	public String toString() {
-		return "Point [L'abscisse est égale à : " + x + " et l'ordonnée est égale à : " + y + "]" ;
+		return getType() + "[L'abscisse est égale à : " + x + " et l'ordonnée est égale à : " + y + "]" ;
 		
 	}
 	
@@ -64,6 +64,9 @@ public class Point implements Cloneable {
 		return true;
 	}
 	
+	protected String getType() {
+		return "POINT";
+	}
 	
 	public void affiche() {
 		System.out.println(this.toString());

@@ -33,11 +33,15 @@ public class Rond implements Cloneable {
 
 	@Override
 	public String toString() {
-		return "Rond [Le point est égale à : " + point + " et le rayon est égal à : " + rayon + "]";
+		return getType() + "[Le point est égale à : " + point + " et le rayon est égal à : " + rayon + "]";
 	}
 
 	public void affiche() {
 		System.out.println(this.toString());
+	}
+	
+	protected String getType() {
+		return "ROND";
 	}
 
 	@Override

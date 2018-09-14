@@ -59,7 +59,7 @@ public class Rectangle implements Cloneable {
 
 	@Override
 	public String toString() {
-		return "Rectangle [Le pointBasGauche est égal à : " + pointBasGauche + ", x=" + x + ", y=" + y
+		return  getType() + "[Le pointBasGauche est égal à : " + pointBasGauche + ", x=" + x + ", y=" + y
 				+ ", getPointBasGauche()=" + getPointBasGauche() + ", getPointBasDroit()=" + getPointBasDroit()
 				+ ", getPointHautDroit()=" + getPointHautDroit() + ", getPointHautGauche()=" + getPointHautGauche()
 				+ "]";
@@ -67,6 +67,10 @@ public class Rectangle implements Cloneable {
 
 	public void affiche() {
 		System.out.println(this.toString());
+	}
+	
+	protected String getType() {
+		return "RECT";
 	}
 
 	@Override
