@@ -91,6 +91,9 @@ public class Main {
 		Rectangle rg4 = FigureUtil.getRandomRectangle();
 		System.out.println("Voici le rectangle généré :");
 		rg4.affiche();
+		
 	}
+
+
 
 }
