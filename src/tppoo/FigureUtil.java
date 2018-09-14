@@ -15,7 +15,7 @@ public class FigureUtil {
 	
 	public static Point getRandomPoint(int MIN_X, int MAX_X, int MIN_Y, int MAX_Y) {
 		int x = getRandomInteger(MIN_X, MAX_X);
-		int y = getRandomInt(MIN_Y, MAX_Y);
+		int y = getRandomInteger(MIN_Y, MAX_Y);
 		return new Point(x, y);
 	}
 
@@ -39,14 +39,14 @@ public class FigureUtil {
 
 	public static Rectangle getRandomRectangle() {
 		int largeur = getRandomInteger(1, MAX_TAILLE);
-		int hauteur = getRandomInt(1, MAX_TAILLE);
+		int hauteur = getRandomInteger(1, MAX_TAILLE);
 		Point p = getRandomPoint(MIN_X, MAX_X - largeur, MIN_Y, MAX_Y - hauteur);
 		return new Rectangle(p, hauteur, largeur);
 	}
 
-	public static int getRandomInt(int min, int max) {
-		return min + (int) (Math.random() * ((max - min) + 1));
-	}
+//	public static int getRandomInt(int min, int max) {
+//		return min + (int) (Math.random() * ((max - min) + 1));
+//	}
 	
 	public static int getRandomInteger(int min, int max) {
 		return (int)(Math.random() * (max - min)) + min;
