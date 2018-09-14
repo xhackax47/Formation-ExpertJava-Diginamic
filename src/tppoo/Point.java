@@ -4,6 +4,8 @@ public class Point implements Cloneable {
 	
 	private int x;
 	private int y;
+	private final int INIT_X = 10;
+	private final int INIT_Y = 10;
 	
 	public Point(int abs, int ord) {
 		x = abs;
@@ -11,8 +13,10 @@ public class Point implements Cloneable {
 	}
 	
 	public Point() {
-		
+		this.x = INIT_X;
+		this.y = INIT_Y;
 	}
+	
 
 	public int getX() {
 		return x;

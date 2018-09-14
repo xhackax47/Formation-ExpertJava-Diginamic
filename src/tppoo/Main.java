@@ -77,6 +77,9 @@ public class Main {
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
 		System.out.println(rg3.equals(rg));
 		System.out.println("");
+		
+		System.out.println(FigureUtil.getRandomRond());
+		System.out.println(FigureUtil.getRandomRectangle());
 	}
 
 }
