@@ -78,6 +78,7 @@ public class Main {
 		System.out.println(rg3.equals(rg));
 		System.out.println("");
 		
+		// GENERATION ALEATOIRE D'OBJETS
 		System.out.println(FigureUtil.getRandomRond());
 		System.out.println(FigureUtil.getRandomRectangle());
 	}

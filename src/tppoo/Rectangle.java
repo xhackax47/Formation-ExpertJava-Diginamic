@@ -71,7 +71,6 @@ public class Rectangle implements Cloneable {
 
 	@Override
 	protected Rectangle clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
 		return (Rectangle) super.clone();
 	}
 

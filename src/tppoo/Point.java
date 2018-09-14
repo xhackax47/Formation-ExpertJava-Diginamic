@@ -42,7 +42,6 @@ public class Point implements Cloneable {
 	
 	@Override
 	protected Point clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
 		return (Point)super.clone();
 	}
 
