@@ -83,13 +83,13 @@ public class Rectangle extends Figure {
 		return true;
 	}
 
-	public boolean equals(Object obj) {
-		if (obj instanceof Rectangle) {
-			Rectangle rg = (Rectangle) obj;
-			return ((rg.x == this.x) && (rg.y == this.y) && (rg.pointBasGauche == this.pointBasGauche));
-		}
-		return false;
-	}
+//	public boolean equals(Object obj) {
+//		if (obj instanceof Rectangle) {
+//			Rectangle rg = (Rectangle) obj;
+//			return ((rg.x == this.x) && (rg.y == this.y) && (rg.pointBasGauche == this.pointBasGauche));
+//		}
+//		return false;
+//	}
 
 	@Override
 	public Point getCentre() {

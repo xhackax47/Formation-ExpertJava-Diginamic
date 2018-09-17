@@ -22,12 +22,12 @@ public class Main {
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE POINTS p & p2");
-		System.out.println(p2.equals(p));
+		p2.equals(p);
 		System.out.println("");	
 		
 		Point p3 = p.clone();
 		System.out.println("VERIFICATION EGALITE POINTS p & p3");
-		System.out.println(p3.equals(p));
+		p3.equals(p);
 		System.out.println("");
 		
 		// CARRE
@@ -51,12 +51,12 @@ public class Main {
 		System.out.println("");
 		
 		System.out.println("VERIFICATION EGALITE RONDS r & r2");
-		System.out.println(r2.equals(r));
+		r2.equals(r);
 		System.out.println("");	
 		
 		Rond r3 = r.clone();
-		System.out.println("VERIFICATION EGALITE RONDS r & r3");
-		System.out.println(r3.equals(r));
+		System.out.println("VERIFICATION EGALITE RONDS r & r3");	
+		r3.equals(r);
 		System.out.println("");
 		
 		// RECTANGLES
@@ -76,12 +76,12 @@ public class Main {
 		System.out.println("");
 		
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
-		System.out.println(rg2.equals(rg));
+		rg2.equals(rg);
 		System.out.println("");	
 		
 		Rectangle rg3 = rg.clone();
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
-		System.out.println(rg3.equals(rg));
+		rg3.equals(rg);
 		System.out.println("");
 		
 		// GENERATION ALEATOIRE D'OBJETS
@@ -89,6 +89,7 @@ public class Main {
 		System.out.println("Voici le rond généré :");
 		System.out.println("");
 		r4.affiche();
+		System.out.println("");
 		Rectangle rg4 = FigureUtil.getRandomRectangle();
 		System.out.println("Voici le rectangle généré :");
 		System.out.println("");
