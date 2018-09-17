@@ -1,5 +1,7 @@
 package tppoo;
 
+import java.util.Iterator;
+
 public abstract class Figure {
 	
 	public void affiche() {
@@ -8,5 +10,8 @@ public abstract class Figure {
 	}
 
 	public abstract Point getCentre();
-	public abstract Point[] getPoints();
+	public abstract Iterator<Point> getPoints();
+//	public static couvre(Point) {
+//		
+//	}
 }

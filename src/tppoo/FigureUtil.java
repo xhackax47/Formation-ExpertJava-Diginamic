@@ -2,6 +2,7 @@ package tppoo;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class FigureUtil {
 
@@ -90,30 +91,41 @@ public class FigureUtil {
 		}
 	}
 
-	public static Point[] getPoints(Figure... figures) {
-		int nb = 0;
-
-		Point[][] pointsDeFigures = new Point[figures.length][];
-		int i = 0;
-
-		for (Figure figure : figures) {
-			pointsDeFigures[i] = figure.getPoints();
-			i++;
-		}
-
-		for (int j = 0; j < pointsDeFigures.length; j++) {
-			nb += pointsDeFigures[j].length;
-		}
-
-		Point[] points = new Point[nb];
-		int index = 0;
-
-		for (int j = 0; j < pointsDeFigures.length; j++) {
-			for (Point p : pointsDeFigures[j]) {
-				points[index] = p;
-				index++;
+//	public static Point[] getPoints(Figure... figures) {
+//		int nb = 0;
+//
+//		Point[][] pointsDeFigures = new Point[figures.length][];
+//		int i = 0;
+//
+//		for (Figure figure : figures) {
+//			pointsDeFigures[i] = figure.getPoints();
+//			i++;
+//		}
+//
+//		for (int j = 0; j < pointsDeFigures.length; j++) {
+//			nb += pointsDeFigures[j].length;
+//		}
+//
+//		Point[] points = new Point[nb];
+//		int index = 0;
+//
+//		for (int j = 0; j < pointsDeFigures.length; j++) {
+//			for (Point p : pointsDeFigures[j]) {
+//				points[index] = p;
+//				index++;
+//			}
+//		}
+//		return points;
+//	}
+	
+	public static Iterator<Point> getPoints(Figure... figures) {
+		Collection<Point> c = new HashSet<>();
+		for(Figure f : figures) {
+			Iterator<Point> it = f.getPoints();
+			while(it.hasNext()) {
+				c.add(it.next());
 			}
 		}
-		return points;
+		return c.iterator();
 	}
 }

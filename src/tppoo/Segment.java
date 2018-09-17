@@ -1,5 +1,9 @@
 package tppoo;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+
 public class Segment extends Figure implements Surfacable {
 	
 	private Point debut;
@@ -26,8 +30,11 @@ public class Segment extends Figure implements Surfacable {
 	}
 
 	@Override
-	public Point[] getPoints() {
-		return new Point[] {debut, fin};
+	public Iterator<Point> getPoints() {
+		Collection<Point> c = new HashSet<>();
+		c.add(debut);
+		c.add(fin);
+		return c.iterator();
 	}
 
 	@Override

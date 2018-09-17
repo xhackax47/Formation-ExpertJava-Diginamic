@@ -1,5 +1,9 @@
 package tppoo;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+
 public class Rond extends Figure implements Surfacable {
 
 	private Point centre;
@@ -73,8 +77,10 @@ public class Rond extends Figure implements Surfacable {
 	}
 
 	@Override
-	public Point[] getPoints() {
-		return new Point[] {centre};
+	public Iterator<Point> getPoints() {
+		Collection<Point> c = new HashSet<>();
+		c.add(centre);
+		return c.iterator();
 	}
 	
 }

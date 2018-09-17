@@ -1,5 +1,9 @@
 package tppoo;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+
 public class Rectangle extends Figure implements Surfacable {
 
 	Point pointBasGauche;
@@ -106,8 +110,12 @@ public class Rectangle extends Figure implements Surfacable {
 	}
 
 	@Override
-	public Point[] getPoints() {
-		return new Point[] {getPointBasGauche(), getPointBasDroit(), getPointHautDroit(), getPointHautGauche()};
-	}
+	public Iterator<Point> getPoints() {
+		Collection<Point> c = new HashSet<>();
+		c.add(getPointBasDroit());
+		c.add(getPointBasGauche());
+		c.add(getPointHautDroit());
+		c.add(getPointHautGauche());
+		return c.iterator();	}
 
 }
