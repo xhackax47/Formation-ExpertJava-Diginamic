@@ -152,12 +152,16 @@ public class Main {
 		System.out.println("");
 		r4.affiche();
 		System.out.println("");
+		System.out.println("SURFACE DE ROND GENERE R4 = ");
+		System.out.println(r4.surface());
+		System.out.println("");
+		System.out.println("");
 		Rectangle rg4 = FigureUtil.getRandomRectangle();
 		System.out.println("Rectangle généré RG4 :");
 		System.out.println("");
 		rg4.affiche();
 		System.out.println("");
-		System.out.println("SURFACE DE RECTANGLE RG4 = ");
+		System.out.println("SURFACE DE RECTANGLE GENERE RG4 = ");
 		System.out.println(rg4.surface());
 		System.out.println("");
 
