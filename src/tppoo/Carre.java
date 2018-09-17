@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Carre extends Rectangle {
+public class Carre extends Rectangle implements Surfacable {
 	
 	Point pointBasGauche;
 	int cote;

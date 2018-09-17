@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Surfacable {
 
 	Point pointBasGauche;
 	int x;
@@ -96,6 +96,13 @@ public class Rectangle extends Figure {
 		int centrex = (pointBasGauche.getX() + getPointHautDroit().getX()) / 2;
 		int centrey = (pointBasGauche.getY() + getPointHautDroit().getY()) / 2;
 		return new Point(centrex, centrey);
+	}
+
+	@Override
+	public double surface() {
+		int largeur = this.x;
+		int hauteur = this.y;
+		return largeur * hauteur;
 	}
 
 }

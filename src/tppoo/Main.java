@@ -35,6 +35,10 @@ public class Main {
 		System.out.println("OBJET c");
 		System.out.println("");
 		c.affiche();
+		System.out.println("");
+		System.out.println("SURFACE DE CARRE c = ");
+		System.out.println(c.surface());
+		System.out.println("");
 
 		// RONDS
 		Rond r = new Rond(p, 5);
@@ -42,12 +46,18 @@ public class Main {
 		System.out.println("");
 		r.affiche();
 		System.out.println("");
+		System.out.println("SURFACE DE ROND r = ");
+		System.out.println(r.surface());
+		System.out.println("");
 
 		Rond r2 = r.clone();
 		System.out.println("CLONE DE ROND r = r2");
 		System.out.println("");
 		r2.setPoint(p2);
 		r2.affiche();
+		System.out.println("");
+		System.out.println("SURFACE DE ROND r2 = ");
+		System.out.println(r2.surface());
 		System.out.println("");
 		
 		System.out.println("VERIFICATION EGALITE RONDS r & r2");
@@ -65,6 +75,9 @@ public class Main {
 		System.out.println("");
 		rg.affiche();
 		System.out.println("");
+		System.out.println("SURFACE DE RECTANGLE RG =");
+		System.out.println(rg.surface());
+		System.out.println("");
 
 		Rectangle rg2 = rg.clone();
 		System.out.println("CLONE DE RECTANGLE rg = rg2");
@@ -73,6 +86,9 @@ public class Main {
 		rg2.setX(30);
 		rg2.setY(15);
 		rg2.affiche();
+		System.out.println("");
+		System.out.println("SURFACE DE RECTANGLE RG2 = ");
+		System.out.println(rg2.surface());
 		System.out.println("");
 		
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
@@ -94,6 +110,10 @@ public class Main {
 		System.out.println("Voici le rectangle généré :");
 		System.out.println("");
 		rg4.affiche();
+		System.out.println("");
+		System.out.println("SURFACE DE RECTANGLE RG4 = ");
+		System.out.println(rg4.surface());
+		System.out.println("");
 		
 	}
 

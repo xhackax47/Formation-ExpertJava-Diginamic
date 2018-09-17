@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Rond extends Figure {
+public class Rond extends Figure implements Surfacable {
 
 	private Point point;
 	private int rayon;
@@ -65,6 +65,11 @@ public class Rond extends Figure {
 	@Override
 	public Point getCentre() {
 		return this.point.clone();
+	}
+
+	@Override
+	public double surface() {
+		return Math.PI * (rayon * rayon); // Pi X R²
 	}
 	
 }
