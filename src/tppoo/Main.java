@@ -1,7 +1,5 @@
 package tppoo;
 
-import java.util.Collection;
-
 import tppoo.Point;
 
 public class Main {
