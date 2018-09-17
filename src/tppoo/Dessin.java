@@ -2,6 +2,7 @@ package tppoo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Dessin {
 	
@@ -16,8 +17,8 @@ public class Dessin {
 		return figures.add(figure);
 	}
 	
-	public Collection<Figure> getFigures(){
-		return figures;
+	public Iterator<Figure> getFigures(){
+		return figures.iterator();
 	}
 
 }

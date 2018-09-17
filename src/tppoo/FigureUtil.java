@@ -128,4 +128,15 @@ public class FigureUtil {
 		}
 		return c.iterator();
 	}
+	
+	public static Figure getFigureEn(Point p, Dessin d) {
+		Iterator<Figure> it = d.getFigures();
+		while (it.hasNext()) {
+			Figure f = it.next();
+			if(f.couvre(p)) {
+				return f;
+			}
+		}
+		return null;
+	}
 }
