@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Rond implements Cloneable {
+public class Rond extends Figure {
 
 	private Point point;
 	private int rayon;
@@ -35,18 +35,14 @@ public class Rond implements Cloneable {
 	public String toString() {
 		return getType() + "[Le point est égale à : " + point + " et le rayon est égal à : " + rayon + "]";
 	}
-
-	public void affiche() {
-		System.out.println(this.toString());
-	}
 	
 	protected String getType() {
 		return "ROND";
 	}
 
 	@Override
-	protected Rond clone() throws CloneNotSupportedException {
-		return (Rond) super.clone();
+	protected Rond clone() {
+		return new Rond();
 	}
 
 	public boolean equals(Rond r) {
@@ -66,4 +62,9 @@ public class Rond implements Cloneable {
 		return false;
 	}
 
+	@Override
+	public Point getCentre() {
+		return this.point.clone();
+	}
+	
 }

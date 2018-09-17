@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Carre {
+public class Carre extends Rectangle {
 	
 	Point pointBasGauche;
 	int cote;
@@ -25,12 +25,24 @@ public class Carre {
 		return "[" + getType() + " " + Bdroit + Hdroit + Bgauche + Hgauche + "]";
 	}
 	
+	public Point getPointBasGauche() {
+		return pointBasGauche;
+	}
+
+	public void setPointBasGauche(Point pointBasGauche) {
+		this.pointBasGauche = pointBasGauche;
+	}
+
+	public int getCote() {
+		return cote;
+	}
+
+	public void setCote(int cote) {
+		this.cote = cote;
+	}
+
 	protected String getType() {
 		return "CARRE";
-	}
-	
-	public void affiche() {
-		System.out.println(this.toString());
 	}
 	
 }

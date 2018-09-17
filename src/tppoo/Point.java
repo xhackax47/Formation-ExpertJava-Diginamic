@@ -41,8 +41,8 @@ public class Point implements Cloneable {
 	}
 	
 	@Override
-	protected Point clone() throws CloneNotSupportedException {
-		return (Point)super.clone();
+	protected Point clone() {
+		return new Point(x,y);
 	}
 
 

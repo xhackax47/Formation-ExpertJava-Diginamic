@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Rectangle implements Cloneable {
+public class Rectangle extends Figure {
 
 	Point pointBasGauche;
 	int x;
@@ -64,18 +64,14 @@ public class Rectangle implements Cloneable {
 				+ ", getPointHautDroit()=" + getPointHautDroit() + ", getPointHautGauche()=" + getPointHautGauche()
 				+ "]";
 	}
-
-	public void affiche() {
-		System.out.println(this.toString());
-	}
 	
 	protected String getType() {
 		return "RECT";
 	}
 
 	@Override
-	protected Rectangle clone() throws CloneNotSupportedException {
-		return (Rectangle) super.clone();
+	protected Rectangle clone() {
+		return new Rectangle();
 	}
 
 	public boolean equals(Rectangle rg) {
@@ -93,6 +89,13 @@ public class Rectangle implements Cloneable {
 			return ((rg.x == this.x) && (rg.y == this.y) && (rg.pointBasGauche == this.pointBasGauche));
 		}
 		return false;
+	}
+
+	@Override
+	public Point getCentre() {
+		int centrex = (pointBasGauche.getX() + getPointHautDroit().getX()) / 2;
+		int centrey = (pointBasGauche.getY() + getPointHautDroit().getY()) / 2;
+		return new Point(centrex, centrey);
 	}
 
 }
