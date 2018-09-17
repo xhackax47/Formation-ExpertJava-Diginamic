@@ -52,7 +52,7 @@ public class FigureUtil {
 		return (int) (Math.random() * (max - min)) + min;
 	}
 
-	public static Point[] getPoints(Figure[] figures) {
+	public static Point[] getPoints(Figure... figures) {
 		int nb = 0;
 
 		Point[][] pointsDeFigures = new Point[figures.length][];

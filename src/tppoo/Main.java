@@ -127,10 +127,11 @@ public class Main {
 		System.out.println("");
 		System.out.println("TABLEAUX");
 		System.out.println("");
-		Figure[] figures = new Figure[3]; 
+		Figure[] figures = new Figure[4]; 
 		figures[0] = c;
 		figures[1] = r;
 		figures[2] = rg;
+		figures[3] = s;
 		System.out.println("FIGURE PRESENTE A L'INDEX 0 : ");
 		System.out.println("");
 		System.out.println(figures[0]);
@@ -142,6 +143,10 @@ public class Main {
 		System.out.println("FIGURE PRESENTE A L'INDEX 2 : ");
 		System.out.println("");
 		System.out.println(figures[2]);
+		System.out.println("");
+		System.out.println("FIGURE PRESENTE A L'INDEX 3 : ");
+		System.out.println("");
+		System.out.println(figures[3]);
 		System.out.println("");
 		
 		// GENERATION ALEATOIRE D'OBJETS
