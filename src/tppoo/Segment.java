@@ -1,6 +1,6 @@
 package tppoo;
 
-public class Segment extends Figure {
+public class Segment extends Figure implements Surfacable {
 	
 	private Point debut;
 	private Point fin;
@@ -28,6 +28,11 @@ public class Segment extends Figure {
 	@Override
 	public Point[] getPoints() {
 		return new Point[] {debut, fin};
+	}
+
+	@Override
+	public double surface() {
+		return 0;
 	}
 
 }

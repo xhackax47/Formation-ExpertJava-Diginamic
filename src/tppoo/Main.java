@@ -1,5 +1,7 @@
 package tppoo;
 
+import java.util.Collection;
+
 import tppoo.Point;
 
 public class Main {
@@ -169,7 +171,30 @@ public class Main {
 		System.out.println("SURFACE DE RECTANGLE GENERE RG4 = ");
 		System.out.println(rg4.surface());
 		System.out.println("");
-
+		System.out.println("");
+		Segment s4 = FigureUtil.getRandomSegment();
+		System.out.println("Segment généré :");
+		System.out.println("");
+		s4.affiche();
+		System.out.println("");
+		System.out.println("SURFACE DE SEGMENT GENERE S4 = ");
+		System.out.println(s4.surface());
+		System.out.println("");
+		System.out.println("");
+		
+		// GENERE
+		System.out.println("Figures générés par methode genere");
+		System.out.println("");
+		
+		for(Figure fgenere : FigureUtil.genere(10)) {
+			System.out.println("Figure générée : ");
+			System.out.println(fgenere.toString());
+			System.out.println("");
+		}
+		
+		System.out.println("");
+		System.out.println("FIN DU PROGRAMME");
+		System.out.println("");
 	}
 
 }
