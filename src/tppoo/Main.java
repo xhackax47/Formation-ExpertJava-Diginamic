@@ -123,6 +123,27 @@ public class Main {
 		System.out.println(
 				"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
+		// TABLEAUX
+		System.out.println("");
+		System.out.println("TABLEAUX");
+		System.out.println("");
+		Figure[] figures = new Figure[3]; 
+		figures[0] = c;
+		figures[1] = r;
+		figures[2] = rg;
+		System.out.println("FIGURE PRESENTE A L'INDEX 0 : ");
+		System.out.println("");
+		System.out.println(figures[0]);
+		System.out.println("");
+		System.out.println("FIGURE PRESENTE A L'INDEX 1 : ");
+		System.out.println("");
+		System.out.println(figures[1]);
+		System.out.println("");
+		System.out.println("FIGURE PRESENTE A L'INDEX 2 : ");
+		System.out.println("");
+		System.out.println(figures[2]);
+		System.out.println("");
+		
 		// GENERATION ALEATOIRE D'OBJETS
 		System.out.println("Voici les objets générés R :");
 		System.out.println("");

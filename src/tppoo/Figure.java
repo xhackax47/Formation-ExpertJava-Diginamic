@@ -7,5 +7,6 @@ public abstract class Figure {
 //		System.out.println(toString());
 	}
 
-	public abstract Point getCentre();	
+	public abstract Point getCentre();
+	public abstract Point[] getPoints();
 }

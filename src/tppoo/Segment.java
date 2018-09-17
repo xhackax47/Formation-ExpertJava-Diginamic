@@ -4,7 +4,7 @@ public class Segment extends Figure {
 	
 	private Point debut;
 	private Point fin;
-
+	
 	public Segment(Point point, int longueur, boolean horizontal) {
 		super();
 		int x = point.getX() + (horizontal ? longueur : 0);
@@ -23,6 +23,11 @@ public class Segment extends Figure {
 		int x = (debut.getX() + fin.getX()) / 2;
 		int y = (debut.getY() + fin.getY()) / 2;
 		return new Point(x,y);
+	}
+
+	@Override
+	public Point[] getPoints() {
+		return new Point[] {debut, fin};
 	}
 
 }

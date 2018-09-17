@@ -2,12 +2,12 @@ package tppoo;
 
 public class Rond extends Figure implements Surfacable {
 
-	private Point point;
+	private Point centre;
 	private int rayon;
 
 	public Rond(Point point, int rayon) {
 		super();
-		this.point = point;
+		this.centre = point;
 		this.rayon = rayon;
 	}
 
@@ -16,11 +16,11 @@ public class Rond extends Figure implements Surfacable {
 	}
 
 	public Point getPoint() {
-		return point;
+		return centre;
 	}
 
 	public void setPoint(Point point) {
-		this.point = point;
+		this.centre = point;
 	}
 
 	public int getRayon() {
@@ -33,7 +33,7 @@ public class Rond extends Figure implements Surfacable {
 
 	@Override
 	public String toString() {
-		return getType() + "[Le point est égale à : " + point + " et le rayon est égal à : " + rayon + "]";
+		return getType() + "[Le point est égale à : " + centre + " et le rayon est égal à : " + rayon + "]";
 	}
 	
 	protected String getType() {
@@ -46,7 +46,7 @@ public class Rond extends Figure implements Surfacable {
 	}
 
 	public boolean equals(Rond r) {
-		if (r.point == this.point && r.rayon == this.rayon) {
+		if (r.centre == this.centre && r.rayon == this.rayon) {
 			System.out.println("Les ronds ne sont pas égaux");
 		} else {
 			System.out.println("Les ronds ne sont pas égaux");
@@ -57,19 +57,24 @@ public class Rond extends Figure implements Surfacable {
 	public boolean equals(Object obj) {
 		if (obj instanceof Rond) {
 			Rond r = (Rond) obj;
-			return ((this.point == r.point) && (this.rayon == r.rayon));
+			return ((this.centre == r.centre) && (this.rayon == r.rayon));
 		}
 		return false;
 	}
 
 	@Override
 	public Point getCentre() {
-		return this.point.clone();
+		return this.centre.clone();
 	}
 
 	@Override
 	public double surface() {
 		return Math.PI * (rayon * rayon); // Pi X R²
+	}
+
+	@Override
+	public Point[] getPoints() {
+		return new Point[] {centre};
 	}
 	
 }

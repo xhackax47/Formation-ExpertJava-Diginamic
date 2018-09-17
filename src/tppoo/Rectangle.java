@@ -105,4 +105,9 @@ public class Rectangle extends Figure implements Surfacable {
 		return largeur * hauteur;
 	}
 
+	@Override
+	public Point[] getPoints() {
+		return new Point[] {getPointBasGauche(), getPointBasDroit(), getPointHautDroit(), getPointHautGauche()};
+	}
+
 }
