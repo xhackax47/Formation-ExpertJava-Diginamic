@@ -38,6 +38,13 @@ public class Segment extends Figure implements Surfacable {
 	}
 
 	@Override
+	public boolean couvre(Point p) {
+		boolean couvreX = (debut.getX()<=p.getX()) && (p.getX()<= fin.getX());
+		boolean couvreY = (debut.getY()<=p.getY()) && (p.getY()<= fin.getY());
+		return couvreX && couvreY;
+	}
+
+	@Override
 	public double surface() {
 		return 0;
 	}

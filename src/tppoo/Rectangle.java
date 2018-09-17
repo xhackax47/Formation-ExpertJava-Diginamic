@@ -116,6 +116,14 @@ public class Rectangle extends Figure implements Surfacable {
 		c.add(getPointBasGauche());
 		c.add(getPointHautDroit());
 		c.add(getPointHautGauche());
-		return c.iterator();	}
+		return c.iterator();	
+		}
+
+	@Override
+	public boolean couvre(Point p) {
+		boolean couvreX = (getPointBasGauche().getX()<=p.getX()) && (p.getX()<= getPointBasDroit().getX());
+		boolean couvreY = (getPointBasGauche().getY()<=p.getY()) && (p.getY()<= getPointHautGauche().getY());
+		return couvreX && couvreY;
+	}
 
 }

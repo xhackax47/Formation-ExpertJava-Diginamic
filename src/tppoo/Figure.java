@@ -11,7 +11,5 @@ public abstract class Figure {
 
 	public abstract Point getCentre();
 	public abstract Iterator<Point> getPoints();
-//	public static couvre(Point) {
-//		
-//	}
+	public abstract boolean couvre(Point p);
 }
