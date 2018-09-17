@@ -87,9 +87,11 @@ public class Main {
 		// GENERATION ALEATOIRE D'OBJETS
 		Rond r4 = FigureUtil.getRandomRond();
 		System.out.println("Voici le rond généré :");
+		System.out.println("");
 		r4.affiche();
 		Rectangle rg4 = FigureUtil.getRandomRectangle();
 		System.out.println("Voici le rectangle généré :");
+		System.out.println("");
 		rg4.affiche();
 		
 	}
