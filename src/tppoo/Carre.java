@@ -21,10 +21,10 @@ public class Carre extends Rectangle implements Surfacable {
 		Point pointHautDroit = new Point(pointBasGauche.getX() + cote, pointBasGauche.getY() + cote);
 		Point pointHautGauche = new Point(pointBasGauche.getX() + cote, pointBasGauche.getY());
 		
-		String Bdroit = "[point=" + pointBasDroit + ", cote=" + cote + "]";
-		String Hdroit = "[point=" + pointHautDroit + ", cote=" + cote + "]";
-		String Bgauche = "[point=" + pointBasGauche + ", cote=" + cote + "]";
-		String Hgauche = "[point=" + pointHautGauche + ", cote=" + cote + "]";
+		String Bdroit = "[Point = " + pointBasDroit + ", Cote = " + cote + "]";
+		String Hdroit = "[Point = " + pointHautDroit + ", Cote = " + cote + "]";
+		String Bgauche = "[Point = " + pointBasGauche + ", Cote = " + cote + "]";
+		String Hgauche = "[Point = " + pointHautGauche + ", Cote = " + cote + "]";
 		
 		return "[" + getType() + " " + Bdroit + Hdroit + Bgauche + Hgauche + "]";
 	}
