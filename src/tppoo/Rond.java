@@ -51,7 +51,7 @@ public class Rond extends Figure implements Surfacable {
 
 	public boolean equals(Rond r) {
 		if (r.centre == this.centre && r.rayon == this.rayon) {
-			System.out.println("Les ronds ne sont pas égaux");
+			System.out.println("Les ronds sont égaux");
 		} else {
 			System.out.println("Les ronds ne sont pas égaux");
 		}
@@ -61,7 +61,7 @@ public class Rond extends Figure implements Surfacable {
 	public boolean equals(Object obj) {
 		if (obj instanceof Rond) {
 			Rond r = (Rond) obj;
-			return ((this.centre == r.centre) && (this.rayon == r.rayon));
+			return centre.equals(r.centre) && rayon == r.rayon ;
 		}
 		return false;
 	}

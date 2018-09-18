@@ -106,12 +106,12 @@ public class Main {
 		System.out.println("SURFACE DE RECTANGLE RG2 = ");
 		System.out.println(rg2.surface());
 		System.out.println("");
+		Rectangle rg3 = rg.clone();
 
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
 		rg2.equals(rg);
 		System.out.println("");
 
-		Rectangle rg3 = rg.clone();
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
 		rg3.equals(rg);
 		System.out.println("");
@@ -119,7 +119,6 @@ public class Main {
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg2 & rg3");
 		rg3.equals(rg2);
 		System.out.println("");
-
 		System.out.println(
 				"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 

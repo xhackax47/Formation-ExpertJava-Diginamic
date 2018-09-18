@@ -78,22 +78,14 @@ public class Rectangle extends Figure implements Surfacable {
 		return new Rectangle();
 	}
 
-	public boolean equals(Rectangle rg) {
-		if ((rg.x == this.x) && (rg.y == this.y) && (rg.pointBasGauche == this.pointBasGauche)) {
-			System.out.println("Les rectangles sont égaux");
-		} else {
-			System.out.println("Les rectangles ne sont pas égaux");
+	public boolean equals(Object obj) {
+		if (obj instanceof Rectangle) {
+			Rectangle r = (Rectangle) obj;
+			return getPointBasGauche().equals(r.getPointBasGauche()) 
+					&& getPointHautDroit().equals(r.getPointHautDroit());
 		}
-		return true;
+		return false;
 	}
-
-//	public boolean equals(Object obj) {
-//		if (obj instanceof Rectangle) {
-//			Rectangle rg = (Rectangle) obj;
-//			return ((rg.x == this.x) && (rg.y == this.y) && (rg.pointBasGauche == this.pointBasGauche));
-//		}
-//		return false;
-//	}
 
 	@Override
 	public Point getCentre() {

@@ -22,6 +22,15 @@ public class Segment extends Figure implements Surfacable {
 		return "[SEGMENT]" + debut + fin + "]";
 	}
 
+	public boolean equals(Object obj) {
+		if (obj instanceof Segment) {
+			Segment s = (Segment) obj;
+			return debut.equals(s.debut) && fin.equals(s.fin)
+					|| (debut.equals(s.fin) && fin.equals(s.debut));
+		}
+		return false;
+	}
+
 	@Override
 	public Point getCentre() {
 		int x = (debut.getX() + fin.getX()) / 2;
