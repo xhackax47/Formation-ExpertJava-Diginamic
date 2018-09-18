@@ -4,11 +4,43 @@ import java.util.Collection;
 
 import tppoo.Point;
 
-public class VaultTec {
+public class MainVaultTec {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
-		System.out.println("LANCEMENT DU PROGRAMME VAULT-TEC...");
+		System.out.print("Bienvenue dans le programme de test de Vault-Tec");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("");
+		System.out.println("LANCEMENT DU PROGRAMME VAULT-TEC");
 
 		try {
 			Thread.sleep(10 * 1000);
@@ -18,7 +50,7 @@ public class VaultTec {
 
 		// POINTS
 		Point p = new Point(10, 10);
-		System.out.println("OBJET p");
+		System.out.println("Création objet Point P...");
 		System.out.println("");
 		p.affiche();
 		System.out.println("");
@@ -30,7 +62,7 @@ public class VaultTec {
 		}
 
 		Point p2 = p.clone();
-		System.out.println("CLONE DE POINT p = p2");
+		System.out.println("Clone de point P = P2...");
 		System.out.println("");
 		p2.setX(20);
 		p2.setY(20);
@@ -43,7 +75,7 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 
-		System.out.println("VERIFICATION EGALITE POINTS p & p2");
+		System.out.println("Vérification de l'égalité des points P & P2...");
 		System.out.println("");
 		if (p2.equals(p)) {
 			System.out.println("P et P2 sont égaux");
@@ -59,7 +91,7 @@ public class VaultTec {
 		}
 
 		Point p3 = p.clone();
-		System.out.println("VERIFICATION EGALITE POINTS p & p3");
+		System.out.println("Vérification de l'égalité des points P & P3...");
 		System.out.println("");
 		if (p3.equals(p)) {
 			System.out.println("P et P3 sont égaux");
@@ -74,7 +106,7 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 
-		System.out.println("VERIFICATION EGALITE POINTS p2 & p3");
+		System.out.println("Vérification de l'égalité des points P3 & P2...");
 		System.out.println("");
 		if (p3.equals(p2)) {
 			System.out.println("P3 et P2 sont égaux");
@@ -91,7 +123,7 @@ public class VaultTec {
 
 		// SEGMENTS
 		Segment s = new Segment(p, 10, true);
-		System.out.println("SEGMENT S");
+		System.out.println("Création objet Segment S...");
 		System.out.println("");
 		s.affiche();
 		System.out.println("");
@@ -104,7 +136,7 @@ public class VaultTec {
 
 		// CARRE
 		Carre c = new Carre(p, 20);
-		System.out.println("OBJET c");
+		System.out.println("Création objet Carré C...");
 		System.out.println("");
 		c.affiche();
 
@@ -115,7 +147,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE CARRE c = ");
+		System.out.println("Calcul de la surface de Carré C...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(c.surface());
 		System.out.println("");
 
@@ -127,7 +166,7 @@ public class VaultTec {
 
 		// RONDS
 		Rond r = new Rond(p, 5);
-		System.out.println("OBJET r");
+		System.out.println("Création objet Rond R...");
 		System.out.println("");
 		r.affiche();
 
@@ -138,7 +177,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE ROND r = ");
+		System.out.println("Calcul de la surface de Rond R...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(r.surface());
 		System.out.println("");
 
@@ -149,7 +195,7 @@ public class VaultTec {
 		}
 
 		Rond r2 = r.clone();
-		System.out.println("CLONE DE ROND r = r2");
+		System.out.println("Clone de Rond R = R2...");
 		System.out.println("");
 		r2.setPoint(p2);
 		r2.setRayon(6);
@@ -162,7 +208,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE ROND r2 = ");
+		System.out.println("Calcul de la surface de Rond R2...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(r2.surface());
 		System.out.println("");
 
@@ -172,7 +225,7 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 
-		System.out.println("VERIFICATION EGALITE RONDS R & R2");
+		System.out.println("Vérification de l'égalité des Ronds R & R2...");
 		System.out.println("");
 		if (r2.equals(r)) {
 			System.out.println("R et R2 sont égaux");
@@ -188,7 +241,7 @@ public class VaultTec {
 		}
 
 		Rond r3 = r.clone();
-		System.out.println("VERIFICATION EGALITE RONDS R & R3");
+		System.out.println("Vérification de l'égalité des Ronds R & R3...");
 		System.out.println("");
 		if (r.equals(r3)) {
 			System.out.println("R et R3 sont égaux");
@@ -203,7 +256,7 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 
-		System.out.println("VERIFICATION EGALITE RONDS R2 & R3");
+		System.out.println("Vérification de l'égalité des Ronds R2 & R3...");
 		System.out.println("");
 		if (r2.equals(r3)) {
 			System.out.println("R2 et R3 sont égaux");
@@ -220,7 +273,7 @@ public class VaultTec {
 
 		// RECTANGLES
 		Rectangle rg = new Rectangle(p, 15, 20);
-		System.out.println("OBJET rg");
+		System.out.println("Création de l'objet Rectangle RG...");
 		System.out.println("");
 		rg.affiche();
 
@@ -231,7 +284,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE RECTANGLE RG =");
+		System.out.println("Calcul de la surface de Rectangle RG...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(rg.surface());
 		System.out.println("");
 
@@ -242,7 +302,7 @@ public class VaultTec {
 		}
 
 		Rectangle rg2 = rg.clone();
-		System.out.println("CLONE DE RECTANGLE rg = rg2");
+		System.out.println("Clone de Rectangle RG = RG2");
 		System.out.println("");
 		rg2.setPointBasGauche(p2);
 		rg2.setX(30);
@@ -256,7 +316,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE RECTANGLE RG2 = ");
+		System.out.println("Calcul de la surface de Rectangle RG2...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(rg2.surface());
 		System.out.println("");
 
@@ -266,7 +333,7 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 
-		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
+		System.out.println("Vérification de l'égalité des rectangles RG & RG2");
 		System.out.println("");
 		if (rg.equals(rg2)) {
 			System.out.println("RG et RG2 sont égaux");
@@ -282,7 +349,7 @@ public class VaultTec {
 		}
 
 		Rectangle rg3 = rg.clone();
-		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
+		System.out.println("Vérification de l'égalité des rectangles RG & RG3");
 		System.out.println("");
 		if (rg3.equals(rg)) {
 			System.out.println("RG et RG3 sont égaux");
@@ -297,7 +364,7 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 
-		System.out.println("VERIFICATION EGALITE RECTANGLES rg2 & rg3");
+		System.out.println("Vérification de l'égalité des rectangles RG2 & RG3");
 		System.out.println("");
 		if (rg3.equals(rg2)) {
 			System.out.println("RG2 et RG3 sont égaux");
@@ -324,7 +391,7 @@ public class VaultTec {
 		figures[1] = r;
 		figures[2] = rg;
 		figures[3] = s;
-		System.out.println("FIGURE PRESENTE A L'INDEX 0 : ");
+		System.out.println("Figure présente à l'index 0 : ");
 		System.out.println("");
 		System.out.println(figures[0]);
 
@@ -335,7 +402,7 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("FIGURE PRESENTE A L'INDEX 1 : ");
+		System.out.println("Figure présente à l'index 1 : ");
 		System.out.println("");
 		System.out.println(figures[1]);
 
@@ -346,7 +413,7 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("FIGURE PRESENTE A L'INDEX 2 : ");
+		System.out.println("Figure présente à l'index 2 : ");
 		System.out.println("");
 		System.out.println(figures[2]);
 
@@ -357,13 +424,13 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("FIGURE PRESENTE A L'INDEX 3 : ");
+		System.out.println("Figure présente à l'index 3 : ");
 		System.out.println("");
 		System.out.println(figures[3]);
 		System.out.println("");
 
 		try {
-			Thread.sleep(3 * 1000);
+			Thread.sleep(1 * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -390,7 +457,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE ROND GENERE R4 = ");
+		System.out.println("Calcul de la surface de Rond généré R4...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(r4.surface());
 
 		try {
@@ -413,7 +487,14 @@ public class VaultTec {
 		}
 
 		System.out.println("");
-		System.out.println("SURFACE DE RECTANGLE GENERE RG4 = ");
+		System.out.println("Calcul de la surface de Rectangle généré RG4...");
+		
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println(rg4.surface());
 
 		try {
@@ -474,17 +555,46 @@ public class VaultTec {
 			e.printStackTrace();
 		}
 		System.out.println("");
-		System.out.println("Attente de fermeture du programme...");
-
+		System.out.print("FERMETURE DU PROGRAMME");
 		try {
-			Thread.sleep(10 * 1000);
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 		System.out.println("");
-		System.out.println("FIN DU PROGRAMME VAULT-TEC");
+		System.out.println("Merci d'avoir utilisé notre programme Vault-Tec citoyen et à bientôt sur notre réseau...");
 		System.out.println("");
+		
+		try {
+			Thread.sleep(10 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
