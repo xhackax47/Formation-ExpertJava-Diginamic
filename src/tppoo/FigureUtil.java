@@ -85,9 +85,8 @@ public class FigureUtil {
 		case 0: return getRandomRond();
 		case 1: return getRandomRectangle();
 		case 2: return getRandomCarre();
-		case 3:
-		default: 
-			return getRandomSegment();
+		case 3: return getRandomSegment();
+		default: return getRandomSegment();
 		}
 	}
 
