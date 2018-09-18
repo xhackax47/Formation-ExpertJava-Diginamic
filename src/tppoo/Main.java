@@ -15,6 +15,12 @@ public class Main {
 		p.affiche();
 		System.out.println("");
 
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		Point p2 = p.clone();
 		System.out.println("CLONE DE POINT p = p2");
 		System.out.println("");
@@ -23,33 +29,57 @@ public class Main {
 		p2.affiche();
 		System.out.println("");
 
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("VERIFICATION EGALITE POINTS p & p2");
 		System.out.println("");
-		if(p2.equals(p)) {
+		if (p2.equals(p)) {
 			System.out.println("P et P2 sont égaux");
-			}else {
-				System.out.println("P et P2 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("P et P2 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		Point p3 = p.clone();
 		System.out.println("VERIFICATION EGALITE POINTS p & p3");
 		System.out.println("");
-		if(p3.equals(p)) {
+		if (p3.equals(p)) {
 			System.out.println("P et P3 sont égaux");
-			}else {
-				System.out.println("P et P3 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("P et P3 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		System.out.println("VERIFICATION EGALITE POINTS p2 & p3");
 		System.out.println("");
-		if(p3.equals(p2)) {
+		if (p3.equals(p2)) {
 			System.out.println("P3 et P2 sont égaux");
-			}else {
-				System.out.println("P3 et P2 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("P3 et P2 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		// SEGMENTS
 		Segment s = new Segment(p, 10, true);
@@ -58,25 +88,57 @@ public class Main {
 		s.affiche();
 		System.out.println("");
 
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		// CARRE
 		Carre c = new Carre(p, 20);
 		System.out.println("OBJET c");
 		System.out.println("");
 		c.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE CARRE c = ");
 		System.out.println(c.surface());
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		// RONDS
 		Rond r = new Rond(p, 5);
 		System.out.println("OBJET r");
 		System.out.println("");
 		r.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE ROND r = ");
 		System.out.println(r.surface());
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		Rond r2 = r.clone();
 		System.out.println("CLONE DE ROND r = r2");
@@ -84,48 +146,92 @@ public class Main {
 		r2.setPoint(p2);
 		r2.setRayon(6);
 		r2.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE ROND r2 = ");
 		System.out.println(r2.surface());
 		System.out.println("");
 
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("VERIFICATION EGALITE RONDS R & R2");
 		System.out.println("");
-		if(r2.equals(r)) {
+		if (r2.equals(r)) {
 			System.out.println("R et R2 sont égaux");
-			}else {
-				System.out.println("R et R2 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("R et R2 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		Rond r3 = r.clone();
 		System.out.println("VERIFICATION EGALITE RONDS R & R3");
 		System.out.println("");
-		if(r.equals(r3)) {
+		if (r.equals(r3)) {
 			System.out.println("R et R3 sont égaux");
-			}else {
-				System.out.println("R et R3 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("R et R3 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		System.out.println("VERIFICATION EGALITE RONDS R2 & R3");
 		System.out.println("");
-		if(r2.equals(r3)) {
+		if (r2.equals(r3)) {
 			System.out.println("R2 et R3 sont égaux");
-			}else {
-				System.out.println("R2 et R3 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("R2 et R3 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		// RECTANGLES
 		Rectangle rg = new Rectangle(p, 15, 20);
 		System.out.println("OBJET rg");
 		System.out.println("");
 		rg.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE RECTANGLE RG =");
 		System.out.println(rg.surface());
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		Rectangle rg2 = rg.clone();
 		System.out.println("CLONE DE RECTANGLE rg = rg2");
@@ -134,19 +240,38 @@ public class Main {
 		rg2.setX(30);
 		rg2.setY(15);
 		rg2.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE RECTANGLE RG2 = ");
 		System.out.println(rg2.surface());
 		System.out.println("");
 
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
 		System.out.println("");
-		if(rg.equals(rg2)) {
+		if (rg.equals(rg2)) {
 			System.out.println("RG et RG2 sont égaux");
-			}else {
-				System.out.println("RG et RG2 ne sont pas égaux");
-			}
+		} else {
+			System.out.println("RG et RG2 ne sont pas égaux");
+		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		Rectangle rg3 = rg.clone();
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
@@ -158,6 +283,12 @@ public class Main {
 		}
 		System.out.println("");
 
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg2 & rg3");
 		System.out.println("");
 		if (rg3.equals(rg2)) {
@@ -166,6 +297,13 @@ public class Main {
 			System.out.println("RG2 et RG3 ne sont pas égaux");
 		}
 		System.out.println("");
+
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println(
 				"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
@@ -181,51 +319,124 @@ public class Main {
 		System.out.println("FIGURE PRESENTE A L'INDEX 0 : ");
 		System.out.println("");
 		System.out.println(figures[0]);
+
+		try {
+			Thread.sleep(0, 5 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("FIGURE PRESENTE A L'INDEX 1 : ");
 		System.out.println("");
 		System.out.println(figures[1]);
+
+		try {
+			Thread.sleep(0, 5 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("FIGURE PRESENTE A L'INDEX 2 : ");
 		System.out.println("");
 		System.out.println(figures[2]);
+
+		try {
+			Thread.sleep(0, 5 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("FIGURE PRESENTE A L'INDEX 3 : ");
 		System.out.println("");
 		System.out.println(figures[3]);
 		System.out.println("");
 
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		// GENERATION ALEATOIRE D'OBJETS
-		System.out.println("Voici les objets générés R :");
+		System.out.println("Voici les objets générés :");
 		System.out.println("");
+
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		Rond r4 = FigureUtil.getRandomRond();
 		System.out.println("Rond généré :");
 		System.out.println("");
 		r4.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE ROND GENERE R4 = ");
 		System.out.println(r4.surface());
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("");
 		Rectangle rg4 = FigureUtil.getRandomRectangle();
 		System.out.println("Rectangle généré RG4 :");
 		System.out.println("");
 		rg4.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("SURFACE DE RECTANGLE GENERE RG4 = ");
 		System.out.println(rg4.surface());
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("");
 		Segment s4 = FigureUtil.getRandomSegment();
 		System.out.println("Segment généré :");
 		System.out.println("");
 		s4.affiche();
+
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("");
 
-		// GENERE
-		System.out.println("Figures générées par methode genere : ");
-		System.out.println("");
+		try {
+			Thread.sleep(3 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		// METHODE GENERE
 		Dessin d = new Dessin();
 //		for (Figure f : FigureUtil.genere(10)) {
 //			d.add(f);
@@ -235,11 +446,34 @@ public class Main {
 		System.out.println("Tri des figures générées : ");
 		System.out.println("");
 		System.out.println(c2);
+
+//		try {
+//			Thread.sleep(3 * 1000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println("");
+//		System.out.println("Figure générée la plus proche de zéro");
+//		System.out.println("");
+//		Figure f3  = FigureUtil.procheZero(d);
+//		System.out.println(f3);
+//		System.out.println("");
+		
+		try {
+			Thread.sleep(2 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("");
-		System.out.println("Figure générée la plus proche de zéro");
-		System.out.println("");
-		Figure f3  = FigureUtil.procheZero(d);
-		System.out.println(f3);
+		System.out.println("Attente de fermeture du programme...");
+
+		try {
+			Thread.sleep(6 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.out.println("");
 		System.out.println("FIN DU PROGRAMME");
 		System.out.println("");
