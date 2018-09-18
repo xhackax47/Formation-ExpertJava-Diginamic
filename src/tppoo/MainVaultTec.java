@@ -559,47 +559,51 @@ public class MainVaultTec {
 			e.printStackTrace();
 		}
 		System.out.println("");
-		System.out.print("FERMETURE DU PROGRAMME");
-		try {
-			Thread.sleep(1 * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.print(".");
-		try {
-			Thread.sleep(1 * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.print(".");
-		try {
-			Thread.sleep(1 * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.print(".");
-		try {
-			Thread.sleep(1 * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.print(".");
-		try {
-			Thread.sleep(1 * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("");
-		System.out.println("");
-		System.out.println("Merci d'avoir utilisé notre programme Vault-Tec citoyen et à bientôt sur notre réseau...");
-		System.out.println("");
+		System.out.print("Merci d'avoir utilisé notre programme Vault-Tec");
 		
 		try {
 			Thread.sleep(10 * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.print("FERMETURE DU PROGRAMME");
+		
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.print(".");
+		try {
+			Thread.sleep(1 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("");
+		System.out.checkError();
+		System.out.flush();
+		System.out.close();
 	}
-
 }
