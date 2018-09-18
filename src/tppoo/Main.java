@@ -224,7 +224,7 @@ public class Main {
 		System.out.println("");
 
 		// GENERE
-		System.out.println("Figures générées par methode genere");
+		System.out.println("Figures générées par methode genere : ");
 		System.out.println("");
 		Dessin d = new Dessin();
 //		for (Figure f : FigureUtil.genere(10)) {
@@ -232,8 +232,14 @@ public class Main {
 //		}
 		d.addAll(FigureUtil.genere(10));
 		Collection<Figure> c2 = FigureUtil.trieDominant(d);
-		System.out.println("Tri des figures générées");
+		System.out.println("Tri des figures générées : ");
+		System.out.println("");
 		System.out.println(c2);
+		System.out.println("");
+		System.out.println("Figure générée la plus proche de zéro");
+		System.out.println("");
+		Figure f3  = FigureUtil.procheZero(d);
+		System.out.println(f3);
 		System.out.println("");
 		System.out.println("FIN DU PROGRAMME");
 		System.out.println("");

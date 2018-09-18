@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.TreeSet;
+import java.util.Map;
 
 public class FigureUtil {
 
@@ -16,6 +17,7 @@ public class FigureUtil {
 	private static int MIN_Y = 0;
 	private static int MAX_Y = 100;
 	private static int MAX_TAILLE = 20;
+	private static final Map<String, Figure> figuresMap = new HashMap<String, Figure>();
 
 	private FigureUtil() {
 
@@ -45,20 +47,27 @@ public class FigureUtil {
 		int rayon = getRandomInteger(1, MAX_TAILLE / 2);
 		Point centre = getRandomPoint(MIN_X + MAX_TAILLE / 2, MAX_X + MAX_TAILLE / 2, MIN_Y + MAX_TAILLE / 2,
 				MAX_Y + MAX_TAILLE / 2);
-		return new Rond(centre, rayon);
+//		return new Rond(centre, rayon);
+		Rond r = new Rond(centre, rayon);
+		figuresMap.put(r.getKey(), r);
+		return r;
 	}
 	
 	public static Carre getRandomCarre() {
 		int cote = getRandomInteger(1, MAX_TAILLE);
 		Point p = getRandomPoint(MIN_X, MAX_X - cote, MIN_Y, MAX_Y - cote);
-		return new Carre(p, cote);
+		Carre c = new Carre(p, cote);
+		figuresMap.put(c.getKey(), c);
+		return c;
 	}
 	
 	public static Segment getRandomSegment() {
 		int longueur = getRandomInteger(1, MAX_TAILLE);
 		boolean horizontal = Math.random() < 0.5;
 		Point p = getRandomPoint(MIN_X, MAX_X - (horizontal ? longueur : 0), MIN_Y, MAX_Y - (horizontal ? 0 : longueur));
-		return new Segment(p, longueur, horizontal);
+		Segment s = new Segment(p, longueur, horizontal);
+		figuresMap.put(s.getKey(), s);
+		return s;
 	}
 
 //	public static Rectangle getRandomRectangle() {
@@ -71,7 +80,9 @@ public class FigureUtil {
 		int largeur = getRandomInteger(1, MAX_TAILLE);
 		int hauteur = getRandomInteger(1, MAX_TAILLE);
 		Point p = getRandomPoint(MIN_X, MAX_X - largeur, MIN_Y, MAX_Y - hauteur);
-		return new Rectangle(p, hauteur, largeur);
+		Rectangle r = new Rectangle(p, hauteur, largeur);
+		figuresMap.put(r.getKey(), r);
+		return r;
 	}
 	
 
@@ -146,13 +157,13 @@ public class FigureUtil {
 	
 	public static Figure procheZero(Dessin d) {
 		Iterator<Figure> it = d.getFigures();
-//		Collection<Figure> figures = new ArrayList<Figure>();
-		TreeSet<Figure> figures = new TreeSet<Figure>();
+		Collection<Figure> figures = new ArrayList<Figure>();
+//		TreeSet<Figure> figures = new TreeSet<Figure>();
 		while(it.hasNext()) {
 			figures.add(it.next());
 		}
-//		return Collections.min(figures);
-		return figures.first();
+		return Collections.min(figures);
+//		return figures.first();
 	}
 	
 	public static Collection<Figure> trieDominant(Dessin d) {
@@ -179,5 +190,13 @@ public class FigureUtil {
 			}	
 		});
 		return figures;	
+	}
+	
+	public static Figure getId(String id) {
+		Figure f = figuresMap.get(id);
+		if(f == null) {
+			f= getRandomFigure();
+		}
+		return f;
 	}
 }
