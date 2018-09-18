@@ -1,6 +1,8 @@
 package tppoo;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -22,6 +24,15 @@ public class FigureUtil {
 			collection.add(getRandomFigure());
 		}
 		return collection;
+	}
+	
+	public static Figure procheZero(Dessin d) {
+		Iterator<Figure> it = d.getFigures();
+		Collection<Figure> figures = new ArrayList<Figure>();
+		while(it.hasNext()) {
+			figures.add(it.next());
+		}
+		return Collections.min(figures);
 	}
 
 //	public static int getRandomInt(int min, int max) {
