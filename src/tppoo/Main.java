@@ -7,6 +7,14 @@ import tppoo.Point;
 public class Main {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
+		
+		System.out.println("LANCEMENT DU PROGRAMME VAULT-TEC...");
+
+		try {
+			Thread.sleep(10 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		// POINTS
 		Point p = new Point(10, 10);
@@ -469,13 +477,13 @@ public class Main {
 		System.out.println("Attente de fermeture du programme...");
 
 		try {
-			Thread.sleep(6 * 1000);
+			Thread.sleep(10 * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 		System.out.println("");
-		System.out.println("FIN DU PROGRAMME");
+		System.out.println("FIN DU PROGRAMME VAULT-TEC");
 		System.out.println("");
 	}
 
