@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import tppoo.Point;
 
-public class Main {
+public class VaultTec {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
