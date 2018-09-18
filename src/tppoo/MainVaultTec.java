@@ -6,7 +6,7 @@ import tppoo.Point;
 
 public class MainVaultTec {
 
-	public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args) throws CloneNotSupportedException {	
 		
 		System.out.print("Bienvenue dans le programme de test de Vault-Tec");
 		try {
