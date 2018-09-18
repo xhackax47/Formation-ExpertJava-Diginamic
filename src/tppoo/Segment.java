@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class Segment extends Figure implements Surfacable {
+public class Segment extends Figure {
 	
 	private Point debut;
 	private Point fin;
@@ -55,11 +55,6 @@ public class Segment extends Figure implements Surfacable {
 		boolean couvreX = (debut.getX()<=p.getX()) && (p.getX()<= fin.getX());
 		boolean couvreY = (debut.getY()<=p.getY()) && (p.getY()<= fin.getY());
 		return couvreX && couvreY;
-	}
-
-	@Override
-	public double surface() {
-		return 0;
 	}
 
 }

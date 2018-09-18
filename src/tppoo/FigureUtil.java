@@ -3,8 +3,11 @@ package tppoo;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.TreeSet;
 
 public class FigureUtil {
 
@@ -16,23 +19,6 @@ public class FigureUtil {
 
 	private FigureUtil() {
 
-	}
-	
-	public static Collection<Figure> genere(int nombreDeFigures) {
-		Collection<Figure> collection = new HashSet<Figure>();
-		while (collection.size() < nombreDeFigures) {
-			collection.add(getRandomFigure());
-		}
-		return collection;
-	}
-	
-	public static Figure procheZero(Dessin d) {
-		Iterator<Figure> it = d.getFigures();
-		Collection<Figure> figures = new ArrayList<Figure>();
-		while(it.hasNext()) {
-			figures.add(it.next());
-		}
-		return Collections.min(figures);
 	}
 
 //	public static int getRandomInt(int min, int max) {
@@ -148,5 +134,50 @@ public class FigureUtil {
 			}
 		}
 		return null;
+	}
+	
+	public static Collection<Figure> genere(int nombreDeFigures) {
+		Collection<Figure> collection = new HashSet<Figure>();
+		while (collection.size() < nombreDeFigures) {
+			collection.add(getRandomFigure());
+		}
+		return collection;
+	}
+	
+	public static Figure procheZero(Dessin d) {
+		Iterator<Figure> it = d.getFigures();
+//		Collection<Figure> figures = new ArrayList<Figure>();
+		TreeSet<Figure> figures = new TreeSet<Figure>();
+		while(it.hasNext()) {
+			figures.add(it.next());
+		}
+//		return Collections.min(figures);
+		return figures.first();
+	}
+	
+	public static Collection<Figure> trieDominant(Dessin d) {
+		List<Figure> figures = new ArrayList<Figure>();
+		Iterator<Figure> it = d.getFigures();
+		while(it.hasNext()) {
+			figures.add(it.next());
+		}
+		Collections.sort(figures, new Comparator<Figure>() {
+
+			@Override
+			public int compare(Figure f1, Figure f2) {
+				int s1 = 0;
+				int s2 = 0;
+				
+				if(f1 instanceof Surfacable) {
+					s1 = (int)((Surfacable) f1).surface();
+				}	
+				if(f2 instanceof Surfacable) {
+					s2 = (int)((Surfacable) f2).surface();
+				}
+				
+				return s2 - s1;
+			}	
+		});
+		return figures;	
 	}
 }

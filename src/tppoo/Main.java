@@ -1,5 +1,7 @@
 package tppoo;
 
+import java.util.Collection;
+
 import tppoo.Point;
 
 public class Main {
@@ -219,21 +221,19 @@ public class Main {
 		System.out.println("");
 		s4.affiche();
 		System.out.println("");
-		System.out.println("SURFACE DE SEGMENT GENERE S4 = ");
-		System.out.println(s4.surface());
-		System.out.println("");
 		System.out.println("");
 
 		// GENERE
-		System.out.println("Figures générés par methode genere");
+		System.out.println("Figures générées par methode genere");
 		System.out.println("");
-
-		for (Figure fgenere : FigureUtil.genere(10)) {
-			System.out.println("Figure générée : ");
-			System.out.println(fgenere.toString());
-			System.out.println("");
-		}
-
+		Dessin d = new Dessin();
+//		for (Figure f : FigureUtil.genere(10)) {
+//			d.add(f);
+//		}
+		d.addAll(FigureUtil.genere(10));
+		Collection<Figure> c2 = FigureUtil.trieDominant(d);
+		System.out.println("Tri des figures générées");
+		System.out.println(c2);
 		System.out.println("");
 		System.out.println("FIN DU PROGRAMME");
 		System.out.println("");
