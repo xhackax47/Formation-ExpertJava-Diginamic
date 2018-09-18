@@ -10,13 +10,17 @@ public class Segment extends Figure {
 	private Point fin;
 	
 	public Segment(Point point, int longueur, boolean horizontal) {
-		super();
+		this(point, longueur, horizontal, Couleur.getCouleurDefault());
+	}
+
+	public Segment(Point point, int longueur, boolean horizontal, Couleur couleur) {
+		super(couleur);
 		int x = point.getX() + (horizontal ? longueur : 0);
 		int y = point.getY() + (horizontal ? 0 : longueur);
 		this.debut = point;
 		this.fin = new Point(x, y);
 	}
-	
+
 	@Override
 	public String toString() {
 		return getType() + debut + fin + "]";

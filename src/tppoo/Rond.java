@@ -8,15 +8,15 @@ public class Rond extends Figure implements Surfacable {
 
 	private Point centre;
 	private int rayon;
-
-	public Rond(Point point, int rayon) {
-		super();
-		this.centre = point;
-		this.rayon = rayon;
+	
+	public Rond(Point centre, int rayon) {
+		this(centre, rayon, Couleur.getCouleurDefault());
 	}
-
-	public Rond() {
-
+	
+	public Rond(Point centre, int rayon, Couleur couleur) {
+		super(couleur);
+		this.centre = centre;
+		this.rayon = rayon;
 	}
 
 	public Point getPoint() {
@@ -46,7 +46,7 @@ public class Rond extends Figure implements Surfacable {
 
 	@Override
 	protected Rond clone() {
-		return new Rond();
+		return new Rond(centre, rayon);
 	}
 
 	public boolean equals(Rond r) {

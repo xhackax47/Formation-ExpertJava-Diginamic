@@ -9,16 +9,16 @@ public class Rectangle extends Figure implements Surfacable {
 	Point pointBasGauche;
 	int x;
 	int y;
-
+	
 	public Rectangle(Point pointBasGauche, int x, int y) {
-		super();
+		this(pointBasGauche, x, y, Couleur.getCouleurDefault());
+	}
+
+	public Rectangle(Point pointBasGauche, int x, int y, Couleur couleur) {
+		super(couleur);
 		this.pointBasGauche = pointBasGauche;
 		this.x = x;
 		this.y = y;
-	}
-
-	public Rectangle() {
-
 	}
 
 	public Point getPointBasGauche() {
@@ -74,7 +74,7 @@ public class Rectangle extends Figure implements Surfacable {
 
 	@Override
 	protected Rectangle clone() {
-		return new Rectangle(this.pointBasGauche, this.x, this.y);
+		return new Rectangle(this.pointBasGauche, this.x, this.y, this.getCouleur());
 	}
 
 	public boolean equals(Object obj) {

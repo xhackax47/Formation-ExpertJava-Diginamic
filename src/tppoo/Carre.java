@@ -6,12 +6,11 @@ public class Carre extends Rectangle implements Surfacable {
 	int cote;
 	
 	public Carre(Point p, int cote) {
-		this.pointBasGauche = p;
-		
-		this.cote = cote;
-		this.x = cote;
-		this.y = cote;
-		
+		this(p, cote, Couleur.getCouleurDefault());	
+	}
+
+	public Carre(Point p, int cote, Couleur couleur) {
+		super(p, cote, cote, couleur);
 	}
 
 	@Override
@@ -47,7 +46,7 @@ public class Carre extends Rectangle implements Surfacable {
 	}
 
 	protected String getType() {
-		return "CARRE";
+		return "[CARRE]";
 	}
 	
 }

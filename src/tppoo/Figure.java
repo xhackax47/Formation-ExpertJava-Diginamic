@@ -6,11 +6,17 @@ public abstract class Figure implements Comparable<Figure>{
 	
 	private static int maxId = 1;
 	private int id;
+	private Couleur couleur;
 	
-	public Figure() {
+	private Figure() {
 		this.id = maxId++;
 	}
 	
+	public Figure(Couleur couleur) {
+		this();
+		this.setCouleur(couleur);
+	}
+
 	public String getKey() {
 		return "" + id;
 	}
@@ -43,5 +49,17 @@ public abstract class Figure implements Comparable<Figure>{
 		double dd = this.distanceAZero() - f.distanceAZero();
 		return (dd == 0) ? 0 : ((dd < 0) ? -1 : 1 );
 	}
+
+	public Couleur getCouleur() {
+		return couleur;
+	}
+
+	public void setCouleur(Couleur couleur) {
+		this.couleur = couleur;
+	}
+	
+//	public Couleur getCouleur() {
+//		return couleur;
+//	}
 
 }
