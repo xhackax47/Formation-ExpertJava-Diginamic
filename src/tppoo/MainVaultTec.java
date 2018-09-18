@@ -8,6 +8,7 @@ public class MainVaultTec {
 
 	public static void main(String[] args) throws CloneNotSupportedException {	
 		
+		System.out.println("");
 		System.out.print("Bienvenue dans le programme de test de Vault-Tec");
 		try {
 			Thread.sleep(1 * 1000);
