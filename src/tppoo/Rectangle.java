@@ -1,11 +1,13 @@
 package tppoo;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class Rectangle extends Figure implements Surfacable {
+public class Rectangle extends Figure implements Surfacable, Serializable {
 
+	private static final long serialVersionUID = 2603039511620876733L;
 	Point pointBasGauche;
 	int x;
 	int y;

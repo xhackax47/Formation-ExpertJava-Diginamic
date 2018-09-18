@@ -1,11 +1,13 @@
 package tppoo;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class Rond extends Figure implements Surfacable {
+public class Rond extends Figure implements Surfacable, Serializable {
 
+	private static final long serialVersionUID = -5982090214082367303L;
 	private Point centre;
 	private int rayon;
 	

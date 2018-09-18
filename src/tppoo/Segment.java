@@ -1,11 +1,13 @@
 package tppoo;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class Segment extends Figure {
+public class Segment extends Figure implements Serializable{
 	
+	private static final long serialVersionUID = 4936442336376118320L;
 	private Point debut;
 	private Point fin;
 	

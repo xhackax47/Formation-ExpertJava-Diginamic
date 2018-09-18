@@ -1,5 +1,15 @@
 package tppoo;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -198,5 +208,54 @@ public class FigureUtil {
 			f= getRandomFigure();
 		}
 		return f;
+	}
+	
+	public static void imprime(Dessin d) throws IOException {	
+		File file = File.createTempFile("monDessin", ".txt");
+		PrintWriter sortie = new PrintWriter(new FileOutputStream(file));
+		Iterator<Figure> it = d.getFigures();
+		while(it.hasNext()) {
+			sortie.println(it.next());
+		}
+		for(int i=0; i<100; i++) {
+			sortie.print("=");
+		}
+		sortie.println();
+		
+		for(int y=MAX_Y; y>MIN_Y; y-- ) {
+			for(int x=MIN_X; x<MAX_X ; x++ ) {
+				Figure f = getFigureEn(new Point(x,y), d);
+				if(f == null) {
+					sortie.print(" ");
+				}else {
+					sortie.print(f.getCouleur().getCode());
+				}
+			}
+			sortie.println();
+		}
+		sortie.close();
+		System.out.println("Dessins imprimés dans le fichier : " + file.getAbsolutePath());
+	}
+	
+	public static void sauvegarde(Dessin d, File f) throws IOException {
+		ObjectOutputStream sortie = new ObjectOutputStream(
+				new BufferedOutputStream(new FileOutputStream(f)));
+		sortie.writeObject(d);
+		System.out.println("Dessins sauvegardés dans le fichier : " + f.getAbsolutePath());
+		sortie.close();
+	}
+	
+	public static Dessin charge(File f) throws IOException, ClassNotFoundException {
+		Dessin d;
+		try {
+		ObjectInputStream entree = new ObjectInputStream(new BufferedInputStream(new FileInputStream(f)));
+		d = (Dessin)entree.readObject();
+		entree.close();
+		} catch(FileNotFoundException ex) {
+			System.out.println("EXCEPTION JAVA : Fichier non trouvé !!!" + ex.getMessage() + "'");
+			d = new Dessin();
+		}
+		
+		return d;
 	}
 }

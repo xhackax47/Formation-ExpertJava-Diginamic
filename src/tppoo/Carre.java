@@ -1,7 +1,10 @@
 package tppoo;
 
-public class Carre extends Rectangle implements Surfacable {
+import java.io.Serializable;
+
+public class Carre extends Rectangle implements Surfacable, Serializable {
 	
+	private static final long serialVersionUID = 7573653943439978925L;
 	Point pointBasGauche;
 	int cote;
 	

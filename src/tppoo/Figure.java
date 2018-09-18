@@ -1,9 +1,11 @@
 package tppoo;
 
+import java.io.Serializable;
 import java.util.Iterator;
 
-public abstract class Figure implements Comparable<Figure>{
+public abstract class Figure implements Comparable<Figure>, Serializable{
 	
+	private static final long serialVersionUID = 3791990126557813882L;
 	private static int maxId = 1;
 	private int id;
 	private Couleur couleur;

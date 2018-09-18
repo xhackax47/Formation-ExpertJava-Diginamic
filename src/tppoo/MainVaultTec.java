@@ -1,12 +1,13 @@
 package tppoo;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import tppoo.Point;
 
 public class MainVaultTec {
 
-	public static void main(String[] args) throws CloneNotSupportedException {	
+	public static void main(String[] args) throws CloneNotSupportedException, IOException {	
 		
 		System.out.println("");
 		System.out.print("Bienvenue dans le programme de test de Vault-Tec");

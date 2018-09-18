@@ -1,11 +1,14 @@
 package tppoo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class Dessin {
-	
+public class Dessin implements Serializable{
+
+	private static final long serialVersionUID = 4770385045088931015L;
+
 	public Dessin() {
 		super();
 	}

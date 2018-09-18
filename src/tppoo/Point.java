@@ -1,7 +1,10 @@
 package tppoo;
 
-public class Point implements Cloneable {
+import java.io.Serializable;
+
+public class Point implements Cloneable, Serializable {
 	
+	private static final long serialVersionUID = 6421619239136105397L;
 	private int x;
 	private int y;
 	private final int INIT_X = 10;
