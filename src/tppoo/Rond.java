@@ -41,7 +41,7 @@ public class Rond extends Figure implements Surfacable {
 	}
 	
 	protected String getType() {
-		return "ROND";
+		return "[ROND] ";
 	}
 
 	@Override

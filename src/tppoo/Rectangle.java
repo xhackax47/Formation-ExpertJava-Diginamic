@@ -69,7 +69,7 @@ public class Rectangle extends Figure implements Surfacable {
 	}
 	
 	protected String getType() {
-		return "RECT";
+		return "[RECT] ";
 	}
 
 	@Override
@@ -116,5 +116,10 @@ public class Rectangle extends Figure implements Surfacable {
 		boolean couvreY = (getPointBasGauche().getY()<=p.getY()) && (p.getY()<= getPointHautGauche().getY());
 		return couvreX && couvreY;
 	}
+
+//	@Override
+//	public double distanceAZero() {
+//		return Math.sqrt(pointBasGauche.getX()*pointBasGauche.getX() + pointBasGauche.getY()*pointBasGauche.getY());
+//	}
 
 }

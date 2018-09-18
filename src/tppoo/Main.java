@@ -22,9 +22,9 @@ public class Main {
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE POINTS p & p2");
+		System.out.println("");
 		if(p2.equals(p)) {
 			System.out.println("P et P2 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("P et P2 ne sont pas égaux");
 			}
@@ -32,18 +32,18 @@ public class Main {
 
 		Point p3 = p.clone();
 		System.out.println("VERIFICATION EGALITE POINTS p & p3");
+		System.out.println("");
 		if(p3.equals(p)) {
 			System.out.println("P et P3 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("P et P3 ne sont pas égaux");
 			}
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE POINTS p2 & p3");
+		System.out.println("");
 		if(p3.equals(p2)) {
 			System.out.println("P3 et P2 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("P3 et P2 ne sont pas égaux");
 			}
@@ -88,9 +88,9 @@ public class Main {
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE RONDS R & R2");
+		System.out.println("");
 		if(r2.equals(r)) {
 			System.out.println("R et R2 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("R et R2 ne sont pas égaux");
 			}
@@ -98,18 +98,18 @@ public class Main {
 
 		Rond r3 = r.clone();
 		System.out.println("VERIFICATION EGALITE RONDS R & R3");
+		System.out.println("");
 		if(r.equals(r3)) {
 			System.out.println("R et R3 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("R et R3 ne sont pas égaux");
 			}
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE RONDS R2 & R3");
+		System.out.println("");
 		if(r2.equals(r3)) {
 			System.out.println("R2 et R3 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("R2 et R3 ne sont pas égaux");
 			}
@@ -138,9 +138,9 @@ public class Main {
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
+		System.out.println("");
 		if(rg.equals(rg2)) {
 			System.out.println("RG et RG2 sont égaux");
-			System.out.println();
 			}else {
 				System.out.println("RG et RG2 ne sont pas égaux");
 			}
@@ -148,18 +148,18 @@ public class Main {
 
 		Rectangle rg3 = rg.clone();
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
+		System.out.println("");
 		if (rg3.equals(rg)) {
 			System.out.println("RG et RG3 sont égaux");
-			System.out.println();
 		} else {
 			System.out.println("RG et RG3 ne sont pas égaux");
 		}
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg2 & rg3");
+		System.out.println("");
 		if (rg3.equals(rg2)) {
 			System.out.println("RG2 et RG3 sont égaux");
-			System.out.println();
 		} else {
 			System.out.println("RG2 et RG3 ne sont pas égaux");
 		}

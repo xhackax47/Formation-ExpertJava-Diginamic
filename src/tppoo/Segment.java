@@ -19,7 +19,11 @@ public class Segment extends Figure implements Surfacable {
 	
 	@Override
 	public String toString() {
-		return "[SEGMENT]" + debut + fin + "]";
+		return getType() + debut + fin + "]";
+	}
+	
+	protected String getType() {
+		return "[SEGMENT] ";
 	}
 
 	public boolean equals(Object obj) {

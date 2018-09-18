@@ -61,4 +61,12 @@ public class Point implements Cloneable {
 		System.out.println(this.toString());
 	}
 
+	public double distance(Point p) {
+		int dx = p.getX() - this.getX();
+		int dy = p.getY() - this.getY();
+		int dx2 = dx * dx;
+		int dy2 = dy * dy;
+		return Math.sqrt(dx2 + dy2);
+	}
+
 }
