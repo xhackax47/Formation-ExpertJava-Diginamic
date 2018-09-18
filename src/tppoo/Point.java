@@ -44,24 +44,13 @@ public class Point implements Cloneable {
 	protected Point clone() {
 		return new Point(x,y);
 	}
-
-
-	public boolean equals(Point p) {
-		if(p.x == this.x && p.y == this.y) {
-			System.out.println("Les points sont égaux");
-		}
-		else {
-			System.out.println("Les points ne sont pas égaux");
-		}
-		return true;
-	}
 	
 	public boolean equals(Object obj) {
 		if(obj instanceof Point) {
 			Point p = (Point) obj;
 			return ((this.x == p.x) && (this.y == p.y));
 		}
-		return true;
+		return false;
 	}
 	
 	protected String getType() {

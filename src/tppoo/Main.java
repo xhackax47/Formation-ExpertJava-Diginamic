@@ -22,16 +22,31 @@ public class Main {
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE POINTS p & p2");
-		p2.equals(p);
+		if(p2.equals(p)) {
+			System.out.println("P et P2 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("P et P2 ne sont pas égaux");
+			}
 		System.out.println("");
 
 		Point p3 = p.clone();
 		System.out.println("VERIFICATION EGALITE POINTS p & p3");
-		p3.equals(p);
+		if(p3.equals(p)) {
+			System.out.println("P et P3 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("P et P3 ne sont pas égaux");
+			}
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE POINTS p2 & p3");
-		p3.equals(p2);
+		if(p3.equals(p2)) {
+			System.out.println("P3 et P2 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("P3 et P2 ne sont pas égaux");
+			}
 		System.out.println("");
 
 		// SEGMENTS
@@ -72,17 +87,32 @@ public class Main {
 		System.out.println(r2.surface());
 		System.out.println("");
 
-		System.out.println("VERIFICATION EGALITE RONDS r & r2");
-		r2.equals(r);
+		System.out.println("VERIFICATION EGALITE RONDS R & R2");
+		if(r2.equals(r)) {
+			System.out.println("R et R2 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("R et R2 ne sont pas égaux");
+			}
 		System.out.println("");
 
 		Rond r3 = r.clone();
-		System.out.println("VERIFICATION EGALITE RONDS r & r3");
-		r3.equals(r);
+		System.out.println("VERIFICATION EGALITE RONDS R & R3");
+		if(r.equals(r3)) {
+			System.out.println("R et R3 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("R et R3 ne sont pas égaux");
+			}
 		System.out.println("");
 
-		System.out.println("VERIFICATION EGALITE RONDS r2 & r3");
-		r3.equals(r2);
+		System.out.println("VERIFICATION EGALITE RONDS R2 & R3");
+		if(r2.equals(r3)) {
+			System.out.println("R2 et R3 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("R2 et R3 ne sont pas égaux");
+			}
 		System.out.println("");
 
 		// RECTANGLES
@@ -106,18 +136,33 @@ public class Main {
 		System.out.println("SURFACE DE RECTANGLE RG2 = ");
 		System.out.println(rg2.surface());
 		System.out.println("");
-		Rectangle rg3 = rg.clone();
 
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg2");
-		rg2.equals(rg);
+		if(rg.equals(rg2)) {
+			System.out.println("RG et RG2 sont égaux");
+			System.out.println();
+			}else {
+				System.out.println("RG et RG2 ne sont pas égaux");
+			}
 		System.out.println("");
 
+		Rectangle rg3 = rg.clone();
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg & rg3");
-		rg3.equals(rg);
+		if (rg3.equals(rg)) {
+			System.out.println("RG et RG3 sont égaux");
+			System.out.println();
+		} else {
+			System.out.println("RG et RG3 ne sont pas égaux");
+		}
 		System.out.println("");
 
 		System.out.println("VERIFICATION EGALITE RECTANGLES rg2 & rg3");
-		rg3.equals(rg2);
+		if (rg3.equals(rg2)) {
+			System.out.println("RG2 et RG3 sont égaux");
+			System.out.println();
+		} else {
+			System.out.println("RG2 et RG3 ne sont pas égaux");
+		}
 		System.out.println("");
 		System.out.println(
 				"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -126,7 +171,7 @@ public class Main {
 		System.out.println("");
 		System.out.println("TABLEAUX");
 		System.out.println("");
-		Figure[] figures = new Figure[4]; 
+		Figure[] figures = new Figure[4];
 		figures[0] = c;
 		figures[1] = r;
 		figures[2] = rg;
@@ -147,7 +192,7 @@ public class Main {
 		System.out.println("");
 		System.out.println(figures[3]);
 		System.out.println("");
-		
+
 		// GENERATION ALEATOIRE D'OBJETS
 		System.out.println("Voici les objets générés R :");
 		System.out.println("");
@@ -178,17 +223,17 @@ public class Main {
 		System.out.println(s4.surface());
 		System.out.println("");
 		System.out.println("");
-		
+
 		// GENERE
 		System.out.println("Figures générés par methode genere");
 		System.out.println("");
-		
-		for(Figure fgenere : FigureUtil.genere(10)) {
+
+		for (Figure fgenere : FigureUtil.genere(10)) {
 			System.out.println("Figure générée : ");
 			System.out.println(fgenere.toString());
 			System.out.println("");
 		}
-		
+
 		System.out.println("");
 		System.out.println("FIN DU PROGRAMME");
 		System.out.println("");

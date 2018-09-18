@@ -48,7 +48,6 @@ public class Rectangle extends Figure implements Surfacable {
 	public Point getPointBasDroit() {
 		Point result = new Point(pointBasGauche.getX(), pointBasGauche.getX() + y);
 		return result;
-
 	}
 
 	public Point getPointHautDroit() {
@@ -75,7 +74,7 @@ public class Rectangle extends Figure implements Surfacable {
 
 	@Override
 	protected Rectangle clone() {
-		return new Rectangle();
+		return new Rectangle(this.pointBasGauche, this.x, this.y);
 	}
 
 	public boolean equals(Object obj) {
