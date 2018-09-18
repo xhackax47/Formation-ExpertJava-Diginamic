@@ -40,8 +40,10 @@ public class MainVaultTec {
 		}
 
 		System.out.println("");
+		System.out.println("");
 		System.out.println("LANCEMENT DU PROGRAMME VAULT-TEC");
-
+		System.out.println("");
+		
 		try {
 			Thread.sleep(10 * 1000);
 		} catch (InterruptedException e) {
@@ -122,7 +124,7 @@ public class MainVaultTec {
 		}
 
 		// SEGMENTS
-		Segment s = new Segment(p, 10, true);
+		Segment s = new Segment(p, 10, true, Couleur.BLEU);
 		System.out.println("Création objet Segment S...");
 		System.out.println("");
 		s.affiche();
@@ -135,7 +137,7 @@ public class MainVaultTec {
 		}
 
 		// CARRE
-		Carre c = new Carre(p, 20);
+		Carre c = new Carre(p, 20, Couleur.ROUGE);
 		System.out.println("Création objet Carré C...");
 		System.out.println("");
 		c.affiche();
@@ -165,7 +167,7 @@ public class MainVaultTec {
 		}
 
 		// RONDS
-		Rond r = new Rond(p, 5);
+		Rond r = new Rond(p, 5, Couleur.JAUNE);
 		System.out.println("Création objet Rond R...");
 		System.out.println("");
 		r.affiche();
@@ -199,6 +201,7 @@ public class MainVaultTec {
 		System.out.println("");
 		r2.setPoint(p2);
 		r2.setRayon(6);
+		r2.setCouleur(Couleur.VERT);
 		r2.affiche();
 
 		try {
@@ -272,7 +275,7 @@ public class MainVaultTec {
 		}
 
 		// RECTANGLES
-		Rectangle rg = new Rectangle(p, 15, 20);
+		Rectangle rg = new Rectangle(p, 15, 20, Couleur.JAUNE);
 		System.out.println("Création de l'objet Rectangle RG...");
 		System.out.println("");
 		rg.affiche();
@@ -307,6 +310,7 @@ public class MainVaultTec {
 		rg2.setPointBasGauche(p2);
 		rg2.setX(30);
 		rg2.setY(15);
+		rg2.setCouleur(Couleur.BLEU);
 		rg2.affiche();
 
 		try {
@@ -532,7 +536,7 @@ public class MainVaultTec {
 //		}
 		d.addAll(FigureUtil.genere(10));
 		Collection<Figure> c2 = FigureUtil.trieDominant(d);
-		System.out.println("Tri des figures générées : ");
+		System.out.println("Figures générées par méthode FigureUtil.genere(10) : ");
 		System.out.println("");
 		System.out.println(c2);
 
@@ -586,6 +590,7 @@ public class MainVaultTec {
 			e.printStackTrace();
 		}
 
+		System.out.println("");
 		System.out.println("");
 		System.out.println("Merci d'avoir utilisé notre programme Vault-Tec citoyen et à bientôt sur notre réseau...");
 		System.out.println("");

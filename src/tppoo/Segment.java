@@ -23,7 +23,7 @@ public class Segment extends Figure {
 
 	@Override
 	public String toString() {
-		return getType() + debut + fin + "]";
+		return getType() + debut + fin +  "]";
 	}
 	
 	protected String getType() {

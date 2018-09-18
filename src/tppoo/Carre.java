@@ -16,17 +16,19 @@ public class Carre extends Rectangle implements Surfacable {
 	@Override
 	public String toString() {
 		
-		Point pointBasGauche = this.getPointBasGauche();
-		Point pointBasDroit = new Point(pointBasGauche.getX(), pointBasGauche.getY() + cote);
-		Point pointHautDroit = new Point(pointBasGauche.getX() + cote, pointBasGauche.getY() + cote);
-		Point pointHautGauche = new Point(pointBasGauche.getX() + cote, pointBasGauche.getY());
+		return super.toString();
 		
-		String Bdroit = "[Point = " + pointBasDroit + ", Cote = " + cote + "]";
-		String Hdroit = "[Point = " + pointHautDroit + ", Cote = " + cote + "]";
-		String Bgauche = "[Point = " + pointBasGauche + ", Cote = " + cote + "]";
-		String Hgauche = "[Point = " + pointHautGauche + ", Cote = " + cote + "]";
-		
-		return "[" + getType() + " " + Bdroit + Hdroit + Bgauche + Hgauche + "]";
+//		Point pointBasGauche = this.getPointBasGauche();
+//		Point pointBasDroit = new Point(getPointBasGauche().getX(), getPointBasGauche().getY() + cote);
+//		Point pointHautDroit = new Point(getPointBasGauche().getX() + cote, getPointBasGauche().getY() + cote);
+//		Point pointHautGauche = new Point(getPointBasGauche().getX() + cote, getPointBasGauche().getY());
+//		
+//		String Bdroit = "[Point = " + pointBasDroit + ", Cote = " + cote + "]";
+//		String Hdroit = "[Point = " + pointHautDroit + ", Cote = " + cote + "]";
+//		String Bgauche = "[Point = " + pointBasGauche + ", Cote = " + cote + "]";
+//		String Hgauche = "[Point = " + pointHautGauche + ", Cote = " + cote + "]";
+//		
+//		return "[" + getType() + " " + Bdroit + Hdroit + Bgauche + Hgauche + "]";
 	}
 	
 	public Point getPointBasGauche() {
