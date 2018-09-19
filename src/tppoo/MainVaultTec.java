@@ -43,7 +43,7 @@ public class MainVaultTec {
 		String sgt = "Segment";
 		String fg = "Figure";
 		String col = "Couleur";
-		String retry = ", voulez-vous réessayer et relancer le programme ? (O/N)";
+		String retry = ", voulez-vous relancer le programme " + vlt + " ? (O/N)";
 
 		// VARIABLES DE PAUSES
 		int pa1 = 1 * 1000;
