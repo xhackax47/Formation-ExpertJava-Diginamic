@@ -62,7 +62,7 @@ public class FigureUtil {
 		figuresMap.put(r.getKey(), r);
 		return r;
 	}
-	
+
 	public static Carre getRandomCarre() {
 		int cote = getRandomInteger(1, MAX_TAILLE);
 		Point p = getRandomPoint(MIN_X, MAX_X - cote, MIN_Y, MAX_Y - cote);
@@ -70,11 +70,12 @@ public class FigureUtil {
 		figuresMap.put(c.getKey(), c);
 		return c;
 	}
-	
+
 	public static Segment getRandomSegment() {
 		int longueur = getRandomInteger(1, MAX_TAILLE);
 		boolean horizontal = Math.random() < 0.5;
-		Point p = getRandomPoint(MIN_X, MAX_X - (horizontal ? longueur : 0), MIN_Y, MAX_Y - (horizontal ? 0 : longueur));
+		Point p = getRandomPoint(MIN_X, MAX_X - (horizontal ? longueur : 0), MIN_Y,
+				MAX_Y - (horizontal ? 0 : longueur));
 		Segment s = new Segment(p, longueur, horizontal);
 		figuresMap.put(s.getKey(), s);
 		return s;
@@ -94,17 +95,21 @@ public class FigureUtil {
 		figuresMap.put(r.getKey(), r);
 		return r;
 	}
-	
 
 	public static Figure getRandomFigure() {
 		byte choix = (byte) (Math.random() * 4);
-		switch(choix) {
-		
-		case 0: return getRandomRond();
-		case 1: return getRandomRectangle();
-		case 2: return getRandomCarre();
-		case 3: return getRandomSegment();
-		default: return getRandomSegment();
+		switch (choix) {
+
+		case 0:
+			return getRandomRond();
+		case 1:
+			return getRandomRectangle();
+		case 2:
+			return getRandomCarre();
+		case 3:
+			return getRandomSegment();
+		default:
+			return getRandomSegment();
 		}
 	}
 
@@ -134,29 +139,29 @@ public class FigureUtil {
 //		}
 //		return points;
 //	}
-	
+
 	public static Iterator<Point> getPoints(Figure... figures) {
 		Collection<Point> c = new HashSet<>();
-		for(Figure f : figures) {
+		for (Figure f : figures) {
 			Iterator<Point> it = f.getPoints();
-			while(it.hasNext()) {
+			while (it.hasNext()) {
 				c.add(it.next());
 			}
 		}
 		return c.iterator();
 	}
-	
+
 	public static Figure getFigureEn(Point p, Dessin d) {
 		Iterator<Figure> it = d.getFigures();
 		while (it.hasNext()) {
 			Figure f = it.next();
-			if(f.couvre(p)) {
+			if (f.couvre(p)) {
 				return f;
 			}
 		}
 		return null;
 	}
-	
+
 	public static Collection<Figure> genere(int nombreDeFigures) {
 		Collection<Figure> collection = new HashSet<Figure>();
 		while (collection.size() < nombreDeFigures) {
@@ -164,22 +169,22 @@ public class FigureUtil {
 		}
 		return collection;
 	}
-	
+
 	public static Figure procheZero(Dessin d) {
 		Iterator<Figure> it = d.getFigures();
 		Collection<Figure> figures = new ArrayList<Figure>();
 //		TreeSet<Figure> figures = new TreeSet<Figure>();
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			figures.add(it.next());
 		}
 		return Collections.min(figures);
 //		return figures.first();
 	}
-	
+
 	public static Collection<Figure> trieDominant(Dessin d) {
 		List<Figure> figures = new ArrayList<Figure>();
 		Iterator<Figure> it = d.getFigures();
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			figures.add(it.next());
 		}
 		Collections.sort(figures, new Comparator<Figure>() {
@@ -188,46 +193,57 @@ public class FigureUtil {
 			public int compare(Figure f1, Figure f2) {
 				int s1 = 0;
 				int s2 = 0;
-				
-				if(f1 instanceof Surfacable) {
-					s1 = (int)((Surfacable) f1).surface();
-				}	
-				if(f2 instanceof Surfacable) {
-					s2 = (int)((Surfacable) f2).surface();
+
+				if (f1 instanceof Surfacable) {
+					s1 = (int) ((Surfacable) f1).surface();
 				}
-				
+				if (f2 instanceof Surfacable) {
+					s2 = (int) ((Surfacable) f2).surface();
+				}
+
 				return s2 - s1;
-			}	
+			}
 		});
-		return figures;	
+		return figures;
 	}
-	
+
 	public static Figure getId(String id) {
 		Figure f = figuresMap.get(id);
-		if(f == null) {
-			f= getRandomFigure();
+		if (f == null) {
+			f = getRandomFigure();
 		}
 		return f;
 	}
-	
-	public static void imprime(Dessin d) throws IOException {	
+
+	@SuppressWarnings("resource")
+	public static void imprime(Dessin d) throws IOException, ImpressionHorsLimiteException {
 		File file = File.createTempFile("monDessin", ".txt");
 		PrintWriter sortie = new PrintWriter(new FileOutputStream(file));
 		Iterator<Figure> it = d.getFigures();
-		while(it.hasNext()) {
-			sortie.println(it.next());
+
+		while (it.hasNext()) {
+			Figure f = it.next();
+			sortie.println(f);
+			Iterator<Point> itp = f.getPoints();
+
+			while (itp.hasNext()) {
+				Point p = itp.next();
+				if (p.getX() < MIN_X || p.getX() > MAX_X || p.getY() < MIN_Y || p.getY() > MAX_Y) {
+					throw new ImpressionHorsLimiteException();
+				}
+			}
 		}
-		for(int i=0; i<100; i++) {
+		for (int i = 0; i < 100; i++) {
 			sortie.print("=");
 		}
 		sortie.println();
-		
-		for(int y=MAX_Y; y>MIN_Y; y-- ) {
-			for(int x=MIN_X; x<MAX_X ; x++ ) {
-				Figure f = getFigureEn(new Point(x,y), d);
-				if(f == null) {
+
+		for (int y = MAX_Y; y > MIN_Y; y--) {
+			for (int x = MIN_X; x < MAX_X; x++) {
+				Figure f = getFigureEn(new Point(x, y), d);
+				if (f == null) {
 					sortie.print(" ");
-				}else {
+				} else {
 					sortie.print(f.getCouleur().getCode());
 				}
 			}
@@ -236,26 +252,25 @@ public class FigureUtil {
 		sortie.close();
 		System.out.println("Dessins imprimés dans le fichier : " + file.getAbsolutePath());
 	}
-	
+
 	public static void sauvegarde(Dessin d, File f) throws IOException {
-		ObjectOutputStream sortie = new ObjectOutputStream(
-				new BufferedOutputStream(new FileOutputStream(f)));
+		ObjectOutputStream sortie = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)));
 		sortie.writeObject(d);
 		System.out.println("Dessins sauvegardés dans le fichier : " + f.getAbsolutePath());
 		sortie.close();
 	}
-	
+
 	public static Dessin charge(File f) throws IOException, ClassNotFoundException {
 		Dessin d;
 		try {
-		ObjectInputStream entree = new ObjectInputStream(new BufferedInputStream(new FileInputStream(f)));
-		d = (Dessin)entree.readObject();
-		entree.close();
-		} catch(FileNotFoundException ex) {
+			ObjectInputStream entree = new ObjectInputStream(new BufferedInputStream(new FileInputStream(f)));
+			d = (Dessin) entree.readObject();
+			entree.close();
+		} catch (FileNotFoundException ex) {
 			System.out.println("EXCEPTION JAVA : Fichier non trouvé !!!" + ex.getMessage() + "'");
 			d = new Dessin();
 		}
-		
+
 		return d;
 	}
 }
