@@ -163,11 +163,15 @@ public class FigureUtil {
 		return null;
 	}
 
-	public static Collection<Figure> genere(int nombreDeFigures) {
+	public static Collection<Figure> genere(int n) {
 		Collection<Figure> collection = new HashSet<Figure>();
-		while (collection.size() < nombreDeFigures) {
+		for(int i= 0; i<n; i++) {
 			collection.add(getRandomFigure());
 		}
+		collection.iterator();
+//		while (collection.size() < nombreDeFigures) {
+//			collection.add(getRandomFigure());
+//		}
 		return collection;
 	}
 

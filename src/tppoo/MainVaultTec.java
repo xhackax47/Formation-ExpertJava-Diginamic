@@ -1,6 +1,6 @@
 package tppoo;
 
-//import java.io.File;
+import java.io.File;
 import java.io.IOException;
 //import java.util.Arrays;
 import java.util.Collection;
@@ -375,6 +375,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 			System.out.print(point);
 			System.out.println(space);
+			System.out.println(space);
 
 			Thread.sleep((long) pa05);
 			Rond r4 = FigureUtil.getRandomRond();
@@ -428,7 +429,7 @@ public class MainVaultTec {
 //			for (Figure f : FigureUtil.genere(10)) {
 //			d.add(f);
 //			}
-			d.addAll(FigureUtil.genere(10));
+			d.addAll(FigureUtil.genere(5));
 			Collection<Figure> c2 = FigureUtil.trieDominant(d);
 //			Collection<String> c3 = Arrays.asList("TestStream1", "TestStream2", "TestStream3", "TestStream4" );
 //			// API STREAM
@@ -444,8 +445,9 @@ public class MainVaultTec {
 			System.out.print(point);
 			System.out.println(space);
 			System.out.println(c2);
-
 			Thread.sleep(pa3);
+			System.out.println(space);
+			System.out.println(space);
 		
 //			System.out.println("");
 //			System.out.println(fg +" générée la plus proche de zéro");
@@ -456,14 +458,16 @@ public class MainVaultTec {
 			
 			//UTILISATION DE L'EXCEPTION CREE
 
-//			try {
-//				FigureUtil.imprime(d);
-//				FigureUtil.sauvegarde(d, File.createTempFile("save", ".txt"));
-//			} catch (ImpressionHorsLimiteException ex) {
-//				System.out.println("Impression hors limite" + ex.getMessage());
-//			} catch (IOException ex) {
-//				System.out.println("Erreur à l'écriture du fichier de sauvegarde" + ex.getMessage());
-//			}
+			try {
+				FigureUtil.imprime(d);
+				FigureUtil.sauvegarde(d, File.createTempFile("save", ".txt"));
+			} catch (ImpressionHorsLimiteException ex) {
+				System.out.println("Impression hors limite " + ex.getMessage());
+			} catch (IOException ex) {
+				System.out.println("Erreur à l'écriture du fichier de sauvegarde" + ex.getMessage());
+			}
+			
+			Thread.sleep(pa1);
 			
 //			Thread t = new Thread(new Runnable() {
 //				public void run() {
