@@ -20,20 +20,30 @@ public class MainVaultTec {
 		char reponse = 'O';
 		String space = "";
 		String point = ".";
-		String wlcm = "Bienvenue chez Vault-Tec";
-		String bye ="";
-		String verifId = "VERIFICATION IDENTITE VAULT TEC";
-		String scanId = "Veuillez entrer votre ID d'employée";
-		String soonLaunch = "Le programme VAULT-TEC va bientôt démarrer, Employé n°";
-		String launch = "LANCEMENT DU PROGRAMME VAULT-TEC";
-		String merci = "Merci d'avoir utilisé notre programme Vault-Tec";
-		String close = "FERMETURE DU PROGRAMME VAULT-TEC";
+		String vlt = "VAULT-TEC";
+		String emp = "Employé";
+		String wlcm = "Bienvenue chez " + vlt;
+		String bye ="Au revoir";
+		String verifId = "VERIFICATION IDENTITE " + vlt;
+		String scanId = "Veuillez entrer votre ID-" + emp + " " + vlt;
+		String soonLaunch = "Le programme " + vlt + " va bientôt démarrer, " +  emp + " n°";
+		String launch = "LANCEMENT DU PROGRAMME " + vlt;
+		String merci = "Merci d'avoir utilisé notre programme " + vlt;
+		String close = "FERMETURE DU PROGRAMME" + vlt;
 		String verifEqual = "Vérification de l'égalité entre ";
 		String calculSurface= "Calcul de la surface de ";
 		String createObj = "Création objet ";
 		String clone = "Clone de ";
 		String equals = " sont égaux";
 		String notEquals = " ne sont pas égaux";
+		String ca = "Carré";
+		String pt = "Point";
+		String rgl = "Rectangle";
+		String rd = "Rond";
+		String sgt = "Segment";
+		String fg = "Figure";
+		String col = "Couleur";
+		String retry = ", voulez-vous réessayer et relancer le programme ? (O/N)";
 
 		// VARIABLES DE PAUSES
 		int pa1 = 1 * 1000;
@@ -85,8 +95,6 @@ public class MainVaultTec {
 			id = sc.nextLine();
 			System.out.println(space);
 			System.out.println(soonLaunch + id);
-
-			System.out.println(space);
 			System.out.println(space);
 			System.out.println(launch);
 			System.out.println(space);
@@ -95,7 +103,7 @@ public class MainVaultTec {
 
 			// POINTS
 			Point p = new Point(10, 10);
-			System.out.println(createObj + "Point P...");
+			System.out.println(createObj + pt + " P...");
 			System.out.println(space);
 			p.affiche();
 			System.out.println(space);
@@ -103,7 +111,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 
 			Point p2 = p.clone();
-			System.out.println(clone + "point P = P2...");
+			System.out.println(clone + pt + " P = P2...");
 			System.out.println(space);
 			p2.setX(20);
 			p2.setY(20);
@@ -154,7 +162,7 @@ public class MainVaultTec {
 
 			// SEGMENTS
 			Segment s = new Segment(p, 10, true, Couleur.BLEU);
-			System.out.println(createObj + "Segment S...");
+			System.out.println(createObj + sgt + " S...");
 			System.out.println(space);
 			s.affiche();
 			System.out.println(space);
@@ -163,14 +171,14 @@ public class MainVaultTec {
 
 			// CARRE
 			Carre c = new Carre(p, 20, Couleur.ROUGE);
-			System.out.println(createObj + "Carré C...");
+			System.out.println(createObj + ca + " C...");
 			System.out.println(space);
 			c.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Carré C...");
+			System.out.println(calculSurface + ca + " C...");
 
 			Thread.sleep(pa1);
 
@@ -181,14 +189,14 @@ public class MainVaultTec {
 
 			// RONDS
 			Rond r = new Rond(p, 5, Couleur.JAUNE);
-			System.out.println(createObj + "Rond R...");
+			System.out.println(createObj + rd + " R...");
 			System.out.println(space);
 			r.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Rond R...");
+			System.out.println(calculSurface + rd + " R...");
 
 			Thread.sleep(pa3);
 
@@ -198,7 +206,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 
 			Rond r2 = r.clone();
-			System.out.println(clone + "Rond R = R2...");
+			System.out.println(clone + rd + " R = R2...");
 			System.out.println(space);
 			r2.setPoint(p2);
 			r2.setRayon(6);
@@ -208,7 +216,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Rond R2...");
+			System.out.println(calculSurface + rd + " R2...");
 
 			Thread.sleep(pa3);
 
@@ -255,14 +263,14 @@ public class MainVaultTec {
 
 			// RECTANGLES
 			Rectangle rg = new Rectangle(p, 15, 20, Couleur.JAUNE);
-			System.out.println(createObj + "Rectangle RG...");
+			System.out.println(createObj + rgl + " RG...");
 			System.out.println(space);
 			rg.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Rectangle RG...");
+			System.out.println(calculSurface + rgl + " RG...");
 
 			Thread.sleep(pa3);
 
@@ -272,7 +280,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 
 			Rectangle rg2 = rg.clone();
-			System.out.println(clone + "Rectangle RG = RG2");
+			System.out.println(clone + rgl + " RG = RG2");
 			System.out.println(space);
 			rg2.setPointBasGauche(p2);
 			rg2.setX(30);
@@ -283,7 +291,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Rectangle RG2...");
+			System.out.println(calculSurface + rgl + " RG2...");
 
 			Thread.sleep(pa3);
 
@@ -344,28 +352,28 @@ public class MainVaultTec {
 			figures[1] = r;
 			figures[2] = rg;
 			figures[3] = s;
-			System.out.println("Figure présente à l'index 0 : ");
+			System.out.println(fg + " présente à l'index 0 : ");
 			System.out.println(space);
 			System.out.println(figures[0]);
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println("Figure présente à l'index 1 : ");
+			System.out.println(fg + " présente à l'index 1 : ");
 			System.out.println(space);
 			System.out.println(figures[1]);
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println("Figure présente à l'index 2 : ");
+			System.out.println(fg + " présente à l'index 2 : ");
 			System.out.println(space);
 			System.out.println(figures[2]);
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println("Figure présente à l'index 3 : ");
+			System.out.println(fg + " présente à l'index 3 : ");
 			System.out.println(space);
 			System.out.println(figures[3]);
 			System.out.println(space);
@@ -378,14 +386,14 @@ public class MainVaultTec {
 
 			Thread.sleep(pa3);
 			Rond r4 = FigureUtil.getRandomRond();
-			System.out.println("Rond généré :");
+			System.out.println(rd + " généré :");
 			System.out.println(space);
 			r4.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Rond généré R4...");
+			System.out.println(calculSurface + rd + " généré R4...");
 
 			Thread.sleep(pa3);
 
@@ -396,14 +404,14 @@ public class MainVaultTec {
 			System.out.println(space);
 			System.out.println(space);
 			Rectangle rg4 = FigureUtil.getRandomRectangle();
-			System.out.println("Rectangle généré RG4 :");
+			System.out.println(rgl + " généré RG4 :");
 			System.out.println(space);
 			rg4.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + "Rectangle généré RG4...");
+			System.out.println(calculSurface + rgl + " généré RG4...");
 
 			Thread.sleep(pa3);
 
@@ -414,7 +422,7 @@ public class MainVaultTec {
 			System.out.println(space);
 			System.out.println(space);
 			Segment s4 = FigureUtil.getRandomSegment();
-			System.out.println("Segment généré :");
+			System.out.println(sgt + " généré :");
 			System.out.println(space);
 			s4.affiche();
 
@@ -457,6 +465,13 @@ public class MainVaultTec {
 //			} catch (IOException ex) {
 //				System.out.println("Erreur à l'écriture du fichier de sauvegarde" + ex.getMessage());
 //			}
+			
+//			Thread t = new Thread(new Runnable() {
+//				public void run() {
+//					;;;;;;
+//				}
+//			});
+//			t.start();
 
 			Thread.sleep(pa2);
 
@@ -485,7 +500,7 @@ public class MainVaultTec {
 			// BOUCLE WHILE POUR RELANCER
 			while (reponse != 'O' && reponse != 'N') {
 				System.out.println(space);
-				System.out.println("Employé n°" + id + ", voulez-vous réessayer et relancer le programme ? (O/N)");
+				System.out.println(emp + " n°" + id + retry);
 				reponse = sc.nextLine().charAt(0);
 			}
 			
@@ -494,7 +509,7 @@ public class MainVaultTec {
 		// FERMETURE BOUCLE DO WHILE
 		while (reponse == 'O');
 		sc.close();
-		System.out.println("Au revoir, Employé n°" + id + " et à bientôt chez Vault-Tec");
+		System.out.println(bye + ", " + emp + "n°" + id + " et à bientôt chez " + vlt);
 		
 		System.out.checkError();
 		System.out.flush();
