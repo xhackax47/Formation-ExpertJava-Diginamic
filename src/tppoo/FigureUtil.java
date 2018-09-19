@@ -256,8 +256,7 @@ public class FigureUtil {
 			sortie.println();
 		}
 		sortie.close();
-		System.out.println("Impression du dessin dans le fichier");
-		System.out.println("");
+		System.out.print("Impression du dessin dans le fichier");
 		Thread.sleep(1*1000);
 		System.out.print(".");
 		Thread.sleep(1*1000);
@@ -266,13 +265,13 @@ public class FigureUtil {
 		System.out.print(".");
 		System.out.println(file.getAbsolutePath());
 		System.out.println("");
+		System.out.println("");
 	}
 
 	public static void sauvegarde(Dessin d, File f) throws IOException, InterruptedException {
 		ObjectOutputStream sortie = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)));
 		sortie.writeObject(d);
-		System.out.println("Dessins sauvegardés dans le fichier : ");
-		System.out.println("");
+		System.out.print("Dessins sauvegardés dans le fichier");
 		Thread.sleep(1*1000);
 		System.out.print(".");
 		Thread.sleep(1*1000);
@@ -280,6 +279,7 @@ public class FigureUtil {
 		Thread.sleep(1*1000);
 		System.out.print(".");
 		System.out.println(f.getAbsolutePath());
+		System.out.println("");
 		System.out.println("");
 		sortie.close();
 	}

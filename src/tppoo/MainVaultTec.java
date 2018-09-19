@@ -27,7 +27,7 @@ public class MainVaultTec {
 		String bye ="Au revoir";
 		String verifId = "VERIFICATION IDENTITE " + vlt;
 		String scanId = "Veuillez entrer votre ID-" + emp + " " + vlt;
-		String soonLaunch = "Le programme " + vlt + " va bientôt démarrer, " +  emp + " n°";
+		String soonLaunch = "Le programme " + vlt + " va bientôt démarrer, tenez vous prêt " +  emp + " n°";
 		String launch = "LANCEMENT DU PROGRAMME " + vlt;
 		String merci = "Merci d'avoir utilisé notre programme " + vlt;
 		String close = "FERMETURE DU PROGRAMME " + vlt;
@@ -513,7 +513,7 @@ public class MainVaultTec {
 		// FERMETURE BOUCLE DO WHILE
 		while (reponse == 'O');
 		sc.close();
-		System.out.println(bye + ", " + emp + "n°" + id + " et à bientôt chez " + vlt);
+		System.out.println(bye + ", " + emp + " n°" + id + " et à bientôt chez " + vlt);
 		
 		System.out.checkError();
 		System.out.flush();
