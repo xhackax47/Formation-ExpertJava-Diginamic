@@ -10,6 +10,8 @@ public class Rond extends Figure implements Surfacable, Serializable {
 	private static final long serialVersionUID = -5982090214082367303L;
 	private Point centre;
 	private int rayon;
+	private String valEquals = "Les ronds sont égaux";
+	private String valNotEquals = "Les ronds ne sont pas égaux";
 	
 	public Rond(Point centre, int rayon) {
 		this(centre, rayon, Couleur.getCouleurDefault());
@@ -53,9 +55,9 @@ public class Rond extends Figure implements Surfacable, Serializable {
 
 	public boolean equals(Rond r) {
 		if (r.centre == this.centre && r.rayon == this.rayon) {
-			System.out.println("Les ronds sont égaux");
+			System.out.println(valEquals);
 		} else {
-			System.out.println("Les ronds ne sont pas égaux");
+			System.out.println(valNotEquals);
 		}
 		return true;
 	}
