@@ -13,11 +13,11 @@ public class MainVaultTec {
 	public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
 
 		// VARIABLES UTILISES PAR LE PROGRAMME
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // Creation objet scanner pour capture clavier
 
 		// VARIABLES DE STRING ET CHAR
 		String id;
-		char reponse = 'O';
+		char reponse = 'O'; // Char initialisé à "O" pour entrer dans la boucle DO WHILE
 		String space = "";
 		String point = ".";
 		String vlt = "VAULT-TEC";
