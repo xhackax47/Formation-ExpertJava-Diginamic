@@ -449,14 +449,14 @@ public class MainVaultTec {
 			
 			//UTILISATION DE L'EXCEPTION CREE
 
-			try {
-				FigureUtil.imprime(d);
-				FigureUtil.sauvegarde(d, File.createTempFile("save", ".txt"));
-			} catch (ImpressionHorsLimiteException ex) {
-				System.out.println("Impression hors limite" + ex.getMessage());
-			} catch (IOException ex) {
-				System.out.println("Erreur à l'écriture du fichier de sauvegarde" + ex.getMessage());
-			}
+//			try {
+//				FigureUtil.imprime(d);
+//				FigureUtil.sauvegarde(d, File.createTempFile("save", ".txt"));
+//			} catch (ImpressionHorsLimiteException ex) {
+//				System.out.println("Impression hors limite" + ex.getMessage());
+//			} catch (IOException ex) {
+//				System.out.println("Erreur à l'écriture du fichier de sauvegarde" + ex.getMessage());
+//			}
 
 			Thread.sleep(pa2);
 
