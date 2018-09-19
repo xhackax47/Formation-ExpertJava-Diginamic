@@ -2,6 +2,7 @@ package tppoo;
 
 //import java.io.File;
 import java.io.IOException;
+//import java.util.Arrays;
 import java.util.Collection;
 import java.util.Scanner;
 
@@ -429,6 +430,11 @@ public class MainVaultTec {
 //			}
 			d.addAll(FigureUtil.genere(10));
 			Collection<Figure> c2 = FigureUtil.trieDominant(d);
+//			Collection<String> c3 = Arrays.asList("TestStream1", "TestStream2", "TestStream3", "TestStream4" );
+//			// API STREAM
+//			c3.stream()
+//			.filter(x -> x.contains("st"));
+			
 			System.out.print("Génération de figures par méthode FigureUtil.genere(10)");
 			Thread.sleep(pa1);
 			System.out.print(point);
@@ -441,12 +447,12 @@ public class MainVaultTec {
 
 			Thread.sleep(pa3);
 		
-			System.out.println("");
-			System.out.println(fg +" générée la plus proche de zéro");
-			System.out.println("");
-			Figure f3  = FigureUtil.procheZero(d);
-			System.out.println(f3);
-			System.out.println("");
+//			System.out.println("");
+//			System.out.println(fg +" générée la plus proche de zéro");
+//			System.out.println("");
+//			Figure f3  = FigureUtil.procheZero(d);
+//			System.out.println(f3);
+//			System.out.println("");
 			
 			//UTILISATION DE L'EXCEPTION CREE
 

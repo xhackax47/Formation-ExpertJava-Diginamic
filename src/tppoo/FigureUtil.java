@@ -19,6 +19,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+//import java.util.function.Predicate;
+//import java.util.TreeSet;
 
 public class FigureUtil {
 
@@ -150,7 +152,6 @@ public class FigureUtil {
 		}
 		return c.iterator();
 	}
-
 	public static Figure getFigureEn(Point p, Dessin d) {
 		Iterator<Figure> it = d.getFigures();
 		while (it.hasNext()) {
@@ -177,6 +178,7 @@ public class FigureUtil {
 		while (it.hasNext()) {
 			figures.add(it.next());
 		}
+		figures.stream().min((p1,p2) -> {return 0;});
 		return Collections.min(figures);
 //		return figures.first();
 	}
