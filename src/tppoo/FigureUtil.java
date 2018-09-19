@@ -222,8 +222,8 @@ public class FigureUtil {
 	}
 
 	@SuppressWarnings("resource")
-	public static void imprime(Dessin d) throws IOException, ImpressionHorsLimiteException {
-		File file = File.createTempFile("monDessin", ".txt");
+	public static void imprime(Dessin d) throws IOException, ImpressionHorsLimiteException, InterruptedException {
+		File file = File.createTempFile("DessinVaultTec", ".txt");
 		PrintWriter sortie = new PrintWriter(new FileOutputStream(file));
 		Iterator<Figure> it = d.getFigures();
 
@@ -256,13 +256,31 @@ public class FigureUtil {
 			sortie.println();
 		}
 		sortie.close();
-		System.out.println("Dessins imprimés dans le fichier : " + file.getAbsolutePath());
+		System.out.println("Impression du dessin dans le fichier");
+		System.out.println("");
+		Thread.sleep(1*1000);
+		System.out.print(".");
+		Thread.sleep(1*1000);
+		System.out.print(".");
+		Thread.sleep(1*1000);
+		System.out.print(".");
+		System.out.println(file.getAbsolutePath());
+		System.out.println("");
 	}
 
-	public static void sauvegarde(Dessin d, File f) throws IOException {
+	public static void sauvegarde(Dessin d, File f) throws IOException, InterruptedException {
 		ObjectOutputStream sortie = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)));
 		sortie.writeObject(d);
-		System.out.println("Dessins sauvegardés dans le fichier : " + f.getAbsolutePath());
+		System.out.println("Dessins sauvegardés dans le fichier : ");
+		System.out.println("");
+		Thread.sleep(1*1000);
+		System.out.print(".");
+		Thread.sleep(1*1000);
+		System.out.print(".");
+		Thread.sleep(1*1000);
+		System.out.print(".");
+		System.out.println(f.getAbsolutePath());
+		System.out.println("");
 		sortie.close();
 	}
 
