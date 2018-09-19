@@ -328,9 +328,6 @@ public class MainVaultTec {
 
 			Thread.sleep(pa2);
 
-			System.out.println(
-					"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-
 			// TABLEAUX
 			System.out.println(space);
 			System.out.println("TABLEAUX");
@@ -427,11 +424,9 @@ public class MainVaultTec {
 
 			// METHODE GENERE
 			Dessin d = new Dessin();
-
-//		for (Figure f : FigureUtil.genere(10)) {
+//			for (Figure f : FigureUtil.genere(10)) {
 //			d.add(f);
-//		}
-
+//			}
 			d.addAll(FigureUtil.genere(10));
 			Collection<Figure> c2 = FigureUtil.trieDominant(d);
 			System.out.print("Génération de figures par méthode FigureUtil.genere(10)");
@@ -444,14 +439,14 @@ public class MainVaultTec {
 			System.out.println(space);
 			System.out.println(c2);
 
-//		Thread.sleep(pa3);
-//		
-//		System.out.println("");
-//		System.out.println("Figure générée la plus proche de zéro");
-//		System.out.println("");
-//		Figure f3  = FigureUtil.procheZero(d);
-//		System.out.println(f3);
-//		System.out.println("");
+			Thread.sleep(pa3);
+		
+			System.out.println("");
+			System.out.println(fg +" générée la plus proche de zéro");
+			System.out.println("");
+			Figure f3  = FigureUtil.procheZero(d);
+			System.out.println(f3);
+			System.out.println("");
 			
 			//UTILISATION DE L'EXCEPTION CREE
 
@@ -495,6 +490,7 @@ public class MainVaultTec {
 			System.out.println(space);
 
 			reponse = ' ';
+			
 			// BOUCLE WHILE POUR RELANCER
 			while (reponse != 'O' && reponse != 'N') {
 				System.out.println(emp + " n°" + id + retry);
@@ -503,6 +499,7 @@ public class MainVaultTec {
 			
 			System.out.checkError();
 		}
+		
 		// FERMETURE BOUCLE DO WHILE
 		while (reponse == 'O');
 		sc.close();

@@ -35,7 +35,7 @@ public abstract class Figure implements Comparable<Figure>, Serializable{
 	
 	public double distanceAZero() {
 		double min = -1;
-		final Point zero = new Point();
+		final Point zero = new Point(0,0);
 		Iterator<Point> it = getPoints();
 		while(it.hasNext()) {
 			Point p = it.next();
