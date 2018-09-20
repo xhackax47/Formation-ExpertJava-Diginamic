@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Built-By: formation
 Build-Jdk: 10.0.2
+Main-Class: fr.xhackax47.Formation-ExpertJava-Diginamic.MainVaultTec
 Created-By: Maven Integration for Eclipse
 

@@ -44,7 +44,7 @@ public class Point implements Cloneable, Serializable {
 	}
 	
 	@Override
-	protected Point clone() {
+	public Point clone() {
 		return new Point(x,y);
 	}
 	

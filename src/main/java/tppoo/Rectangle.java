@@ -74,7 +74,7 @@ public class Rectangle extends Figure implements Surfacable, Serializable {
 	}
 
 	@Override
-	protected Rectangle clone() {
+	public Rectangle clone() {
 		return new Rectangle(this.pointBasGauche, this.x, this.y, this.getCouleur());
 	}
 

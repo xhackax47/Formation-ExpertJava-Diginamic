@@ -1,4 +1,4 @@
-package tppoo;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,16 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Scanner;
 
+import tppoo.Carre;
+import tppoo.Couleur;
+import tppoo.Dessin;
+import tppoo.Figure;
+import tppoo.FigureUtil;
+import tppoo.ImpressionHorsLimiteException;
 import tppoo.Point;
+import tppoo.Rectangle;
+import tppoo.Rond;
+import tppoo.Segment;
 
 public class MainVaultTec {
 

@@ -49,7 +49,7 @@ public class Rond extends Figure implements Surfacable, Serializable {
 	}
 
 	@Override
-	protected Rond clone() {
+	public Rond clone() {
 		return new Rond(centre, rayon);
 	}
 

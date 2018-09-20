@@ -8,11 +8,15 @@
 	<name>Formation Diginamic</name>
 
 	<properties>
-	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.inputEncoding>UTF-8</project.build.inputEncoding>
+		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+		<project.reporting.inputEncoding>UTF-8</project.reporting.inputEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>10</maven.compiler.source>
 		<maven.compiler.target>10</maven.compiler.target>
 	</properties>
-
+	
 	<developers>
 		<developer>
 			<id>schaabi</id>
@@ -76,6 +80,7 @@
 		<testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
 		<outputDirectory>${basedir}/target/classes</outputDirectory>
 		<testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+		
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -84,16 +89,50 @@
 					<configuration>
 						<source>10</source>
 						<target>10</target>
-<!-- 						<encoding>UTF-8</encoding> -->
+						<!-- <encoding>UTF-8</encoding> -->
 					</configuration>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<mainClass>fr.xhackax47.Formation-ExpertJava-Diginamic.MainVaultTec</mainClass>
+							</manifest>
+						</archive>
+					</configuration>
 				</plugin>
+
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<mainClass>fr.xhackax47.Formation-ExpertJava-Diginamic.MainVaultTec</mainClass>
+							</manifest>
+						</archive>
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
+					</configuration>
+					<executions>
+						<execution>
+							<id>make-assembly</id>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
+	
 	</build>
 
 	<reporting>
@@ -108,4 +147,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	
 </project>
