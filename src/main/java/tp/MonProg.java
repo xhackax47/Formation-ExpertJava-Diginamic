@@ -1,4 +1,4 @@
-package main.java;
+package tp;
 
 import java.util.Scanner;
 
@@ -27,7 +27,7 @@ public class MonProg {
 			System.out.println("Nom du Testeur : ");
 			nom = sc.nextLine();
 			System.out.println("");
-			System.out.println("Bonjour " + nom + ", Les tests JAVA vont débuter dans 10 secondes...");
+			System.out.println("Bonjour " + nom + ", Les tests JAVA vont dï¿½buter dans 10 secondes...");
 
 			try {
 				Thread.sleep(10 * 1000);
@@ -36,7 +36,7 @@ public class MonProg {
 			}
 
 			System.out.println("");
-			System.out.println("Maintenant " + nom + ", l'affichage des arguments et variables va débuter...");
+			System.out.println("Maintenant " + nom + ", l'affichage des arguments et variables va dï¿½buter...");
 			System.out.println("");
 
 			try {
@@ -46,7 +46,7 @@ public class MonProg {
 			}
 
 			// UTILISATION DES ARGS
-			System.out.println("Voici les arguments entrés dans la Running Configuration du programme : " + p1 + " - "
+			System.out.println("Voici les arguments entrï¿½s dans la Running Configuration du programme : " + p1 + " - "
 					+ p2 + " - " + p3);
 
 			try {
@@ -81,7 +81,7 @@ public class MonProg {
 			}
 			// CALCULS
 			System.out.println("");
-			System.out.println("Maintenant " + nom + ", les tests de calculs de variables vont débuter...");
+			System.out.println("Maintenant " + nom + ", les tests de calculs de variables vont dï¿½buter...");
 			System.out.println("");
 
 			try {
@@ -129,7 +129,7 @@ public class MonProg {
 				e.printStackTrace();
 			}
 
-			System.out.println("Temps de trajet entre la terre et le soleil à la vitesse de la lumière = " + (i5 / i4)
+			System.out.println("Temps de trajet entre la terre et le soleil ï¿½ la vitesse de la lumiï¿½re = " + (i5 / i4)
 					+ " secondes");
 			
 			try {
@@ -138,7 +138,7 @@ public class MonProg {
 			}
 			// UTILISATION CONDITIONS
 			System.out.println("");
-			System.out.println("Maintenant " + nom + ", les tests de conditions IF/ELSE vont débuter...");
+			System.out.println("Maintenant " + nom + ", les tests de conditions IF/ELSE vont dï¿½buter...");
 			System.out.println("");
 			
 			try {
@@ -156,7 +156,7 @@ public class MonProg {
 			}
 
 			else {
-				System.out.println("La valeur boolenne de bool1 n'est pas définie (ENTREE ELSE)");
+				System.out.println("La valeur boolenne de bool1 n'est pas dï¿½finie (ENTREE ELSE)");
 			}
 
 			try {
@@ -176,7 +176,7 @@ public class MonProg {
 			}
 
 			else {
-				System.out.println("La valeur boolenne de bool1 n'est pas définie (ENTREE ELSE )");
+				System.out.println("La valeur boolenne de bool1 n'est pas dï¿½finie (ENTREE ELSE )");
 			}
 
 			try {
@@ -186,7 +186,7 @@ public class MonProg {
 			}
 			// UTILISATION BOUCLE FOR
 			System.out.println("");
-			System.out.println("Maintenant " + nom + ", le tests de boucle FOR va débuter...");
+			System.out.println("Maintenant " + nom + ", le tests de boucle FOR va dï¿½buter...");
 			System.out.println("");
 			try {
 				Thread.sleep(5 * 1000);
@@ -213,7 +213,7 @@ public class MonProg {
 			// REMERCIEMENTS
 			System.out.println("");
 			System.out.println("Merci " + nom
-					+ " d'avoir utilisé cet outil d'entraînement contenant la plupart des opérations logique en JAVA");
+					+ " d'avoir utilisï¿½ cet outil d'entraï¿½nement contenant la plupart des opï¿½rations logique en JAVA");
 			try {
 				Thread.sleep(1 * 1000);
 			} catch (InterruptedException e) {
@@ -230,14 +230,14 @@ public class MonProg {
 			// BOUCLE WHILE POUR RELANCER
 			while (reponse != 'O' && reponse != 'N') {
 				System.out.println("");
-				System.out.println("Voulez-vous réessayer et relancer la boucle DO WHILE du programme ? (O/N)");
+				System.out.println("Voulez-vous rï¿½essayer et relancer la boucle DO WHILE du programme ? (O/N)");
 				reponse = sc.nextLine().charAt(0);
 			}
 		}
 		// FERMETURE BOUCLE DO WHILE
 		while (reponse == 'O');
 		sc.close();
-		System.out.println("Au revoir " + nom + " et à bientôt...en JAVA");
+		System.out.println("Au revoir " + nom + " et ï¿½ bientï¿½t...en JAVA");
 
 	}
 
