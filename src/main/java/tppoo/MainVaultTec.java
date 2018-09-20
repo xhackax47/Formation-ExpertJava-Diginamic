@@ -18,26 +18,26 @@ public class MainVaultTec {
 
 		// VARIABLES DE STRING ET CHAR
 		String id;
-		char reponse = 'O'; // Char initialisé à "O" pour entrer dans la boucle DO WHILE
+		char reponse = 'O'; // Char initialisï¿½ ï¿½ "O" pour entrer dans la boucle DO WHILE
 		String space = "";
 		String point = ".";
 		String vlt = "VAULT-TEC";
-		String emp = "Employé";
+		String emp = "EmployÃ©";
 		String wlcm = "Bienvenue chez " + vlt;
 		String bye ="Au revoir";
 		String verifId = "VERIFICATION IDENTITE " + vlt;
-		String scanId = "Veuillez entrer votre ID-" + emp + " " + vlt;
-		String soonLaunch = "Le programme " + vlt + " va bientôt démarrer, tenez vous prêt " +  emp + " n°";
+		String scanId = "Veuillez entrez votre ID-" + emp + " " + vlt;
+		String soonLaunch = "Le programme " + vlt + " va bientÃ´t dÃ©marrer, tenez vous prÃªt " +  emp + " nÂ°";
 		String launch = "LANCEMENT DU PROGRAMME " + vlt;
-		String merci = "Merci d'avoir utilisé notre programme " + vlt;
+		String merci = "Merci d'avoir utilisÃ© notre programme " + vlt;
 		String close = "FERMETURE DU PROGRAMME " + vlt;
-		String verifEqual = "Vérification de l'égalité entre ";
+		String verifEqual = "VÃ©rification de l'Ã©galitÃ© entre ";
 		String calculSurface= "Calcul de la surface de ";
-		String createObj = "Création objet ";
+		String createObj = "CrÃ©ation objet ";
 		String clone = "Clone de ";
-		String equals = " sont égaux";
-		String notEquals = " ne sont pas égaux";
-		String ca = "Carré";
+		String equals = " sont Ã©gaux";
+		String notEquals = " ne sont pas Ã©gaux";
+		String ca = "CarrÃ©";
 		String pt = "Point";
 		String rgl = "Rectangle";
 		String rd = "Rond";
@@ -338,28 +338,28 @@ public class MainVaultTec {
 			figures[1] = r;
 			figures[2] = rg;
 			figures[3] = s;
-			System.out.println(fg + " présente à l'index 0 : ");
+			System.out.println(fg + " prÃ©sente Ã  l'index 0 : ");
 			System.out.println(space);
 			System.out.println(figures[0]);
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(fg + " présente à l'index 1 : ");
+			System.out.println(fg + " prÃ©sente Ã  l'index 1 : ");
 			System.out.println(space);
 			System.out.println(figures[1]);
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(fg + " présente à l'index 2 : ");
+			System.out.println(fg + " prÃ©sente Ã  l'index 2 : ");
 			System.out.println(space);
 			System.out.println(figures[2]);
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(fg + " présente à l'index 3 : ");
+			System.out.println(fg + " prÃ©sente Ã  l'index 3 : ");
 			System.out.println(space);
 			System.out.println(figures[3]);
 			System.out.println(space);
@@ -367,7 +367,7 @@ public class MainVaultTec {
 			Thread.sleep(pa1);
 
 			// GENERATION ALEATOIRE D'OBJETS
-			System.out.print("Génération d'objets");
+			System.out.print("GÃ©nÃ©ration d'objets");
 			Thread.sleep(pa1);
 			System.out.print(point);
 			Thread.sleep(pa1);
@@ -379,14 +379,14 @@ public class MainVaultTec {
 
 			Thread.sleep((long) pa05);
 			Rond r4 = FigureUtil.getRandomRond();
-			System.out.println(rd + " généré :");
+			System.out.println(rd + " gÃ©nÃ©rÃ© :");
 			System.out.println(space);
 			r4.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + rd + " généré R4...");
+			System.out.println(calculSurface + rd + " gÃ©nÃ©rÃ© R4...");
 
 			Thread.sleep(pa4);
 
@@ -396,14 +396,14 @@ public class MainVaultTec {
 
 			System.out.println(space);
 			Rectangle rg4 = FigureUtil.getRandomRectangle();
-			System.out.println(rgl + " généré RG4 :");
+			System.out.println(rgl + " gÃ©nÃ©rÃ© RG4 :");
 			System.out.println(space);
 			rg4.affiche();
 
 			Thread.sleep(pa1);
 
 			System.out.println(space);
-			System.out.println(calculSurface + rgl + " généré RG4...");
+			System.out.println(calculSurface + rgl + " gÃ©nÃ©rÃ© RG4...");
 
 			Thread.sleep(pa4);
 
@@ -413,7 +413,7 @@ public class MainVaultTec {
 
 			System.out.println(space);
 			Segment s4 = FigureUtil.getRandomSegment();
-			System.out.println(sgt + " généré :");
+			System.out.println(sgt + " gÃ©nÃ©rÃ© :");
 			System.out.println(space);
 			s4.affiche();
 
@@ -436,7 +436,7 @@ public class MainVaultTec {
 //			c3.stream()
 //			.filter(x -> x.contains("st"));
 			
-			System.out.print("Génération de figures par méthode FigureUtil.genere(10)");
+			System.out.print("GÃ©nÃ©ration de figures par mÃ©thode FigureUtil.genere(10)");
 			Thread.sleep(pa1);
 			System.out.print(point);
 			Thread.sleep(pa1);
@@ -450,7 +450,7 @@ public class MainVaultTec {
 			System.out.println(space);
 		
 //			System.out.println("");
-//			System.out.println(fg +" générée la plus proche de zéro");
+//			System.out.println(fg +" gï¿½nï¿½rï¿½e la plus proche de zï¿½ro");
 //			System.out.println("");
 //			Figure f3  = FigureUtil.procheZero(d);
 //			System.out.println(f3);
@@ -464,7 +464,7 @@ public class MainVaultTec {
 			} catch (ImpressionHorsLimiteException ex) {
 				System.out.println("Impression hors limite " + ex.getMessage());
 			} catch (IOException ex) {
-				System.out.println("Erreur à l'écriture du fichier de sauvegarde" + ex.getMessage());
+				System.out.println("Erreur Ã  l'Ã©criture du fichier de sauvegarde" + ex.getMessage());
 			}
 			
 			Thread.sleep(pa1);
@@ -503,7 +503,7 @@ public class MainVaultTec {
 			
 			// BOUCLE WHILE POUR RELANCER
 			while (reponse != 'O' && reponse != 'N') {
-				System.out.println(emp + " n°" + id + retry);
+				System.out.println(emp + " nÂ°" + id + retry);
 				reponse = sc.nextLine().charAt(0);
 			}
 			
@@ -513,7 +513,7 @@ public class MainVaultTec {
 		// FERMETURE BOUCLE DO WHILE
 		while (reponse == 'O');
 		sc.close();
-		System.out.println(bye + ", " + emp + " n°" + id + " et à bientôt chez " + vlt);
+		System.out.println(bye + ", " + emp + " nÂ°" + id + " et Ã  bientÃ´t chez " + vlt);
 		
 		System.out.checkError();
 		System.out.flush();
