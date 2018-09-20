@@ -11,7 +11,7 @@ public class Rectangle extends Figure implements Surfacable, Serializable {
 	Point pointBasGauche;
 	int x;
 	int y;
-	
+
 	public Rectangle(Point pointBasGauche, int x, int y) {
 		this(pointBasGauche, x, y, Couleur.getCouleurDefault());
 	}
@@ -64,12 +64,11 @@ public class Rectangle extends Figure implements Surfacable, Serializable {
 
 	@Override
 	public String toString() {
-		return  getType() + "[Le pointBasGauche est égal à : " + pointBasGauche + ", x=" + x + ", y=" + y
-				+ ", getPointBasGauche()=" + getPointBasGauche() + ", getPointBasDroit()=" + getPointBasDroit()
-				+ ", getPointHautDroit()=" + getPointHautDroit() + ", getPointHautGauche()=" + getPointHautGauche()
-				+ "]";
+		return getType() + "[pointBasGauche  = " + pointBasGauche + ", x=" + x + ", y=" + y + ", pointBasDroit ="
+				+ getPointBasDroit() + ", pointHautDroit =" + getPointHautDroit() + ", pointHautGauche ="
+				+ getPointHautGauche() + "]";
 	}
-	
+
 	protected String getType() {
 		return "[RECT] ";
 	}
@@ -82,7 +81,7 @@ public class Rectangle extends Figure implements Surfacable, Serializable {
 	public boolean equals(Object obj) {
 		if (obj instanceof Rectangle) {
 			Rectangle r = (Rectangle) obj;
-			return getPointBasGauche().equals(r.getPointBasGauche()) 
+			return getPointBasGauche().equals(r.getPointBasGauche())
 					&& getPointHautDroit().equals(r.getPointHautDroit());
 		}
 		return false;
@@ -109,13 +108,13 @@ public class Rectangle extends Figure implements Surfacable, Serializable {
 		c.add(getPointBasGauche());
 		c.add(getPointHautDroit());
 		c.add(getPointHautGauche());
-		return c.iterator();	
-		}
+		return c.iterator();
+	}
 
 	@Override
 	public boolean couvre(Point p) {
-		boolean couvreX = (getPointBasGauche().getX()<=p.getX()) && (p.getX()<= getPointBasDroit().getX());
-		boolean couvreY = (getPointBasGauche().getY()<=p.getY()) && (p.getY()<= getPointHautGauche().getY());
+		boolean couvreX = (getPointBasGauche().getX() <= p.getX()) && (p.getX() <= getPointBasDroit().getX());
+		boolean couvreY = (getPointBasGauche().getY() <= p.getY()) && (p.getY() <= getPointHautGauche().getY());
 		return couvreX && couvreY;
 	}
 

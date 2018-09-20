@@ -10,8 +10,8 @@ public class Rond extends Figure implements Surfacable, Serializable {
 	private static final long serialVersionUID = -5982090214082367303L;
 	private Point centre;
 	private int rayon;
-	private String valEquals = "Les ronds sont égaux";
-	private String valNotEquals = "Les ronds ne sont pas égaux";
+	private String valEquals = "Les ronds sont Ã©gaux";
+	private String valNotEquals = "Les ronds ne sont pas Ã©gaux";
 	
 	public Rond(Point centre, int rayon) {
 		this(centre, rayon, Couleur.getCouleurDefault());
@@ -41,7 +41,7 @@ public class Rond extends Figure implements Surfacable, Serializable {
 
 	@Override
 	public String toString() {
-		return getType() + "[Le point est égale à : " + centre + " et le rayon est égal à : " + rayon + "]";
+		return getType() + "[Le point est Ã©gal Ã  : " + centre + " et le rayon est Ã©gal Ã  : " + rayon + "]";
 	}
 	
 	protected String getType() {
@@ -77,7 +77,7 @@ public class Rond extends Figure implements Surfacable, Serializable {
 
 	@Override
 	public double surface() {
-		return Math.PI * (rayon * rayon); // Pi X R²
+		return Math.PI * (rayon * rayon); // Pi X RÂ²
 	}
 
 	@Override

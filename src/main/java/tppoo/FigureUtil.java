@@ -271,7 +271,7 @@ public class FigureUtil {
 	public static void sauvegarde(Dessin d, File f) throws IOException, InterruptedException {
 		ObjectOutputStream sortie = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)));
 		sortie.writeObject(d);
-		System.out.print("Dessins sauvegardés dans le fichier");
+		System.out.print("Dessins sauvegardÃ©s dans le fichier");
 		Thread.sleep(1*1000);
 		System.out.print(".");
 		Thread.sleep(1*1000);
@@ -291,7 +291,7 @@ public class FigureUtil {
 			d = (Dessin) entree.readObject();
 			entree.close();
 		} catch (FileNotFoundException ex) {
-			System.out.println("EXCEPTION JAVA : Fichier non trouvé !!!" + ex.getMessage() + "'");
+			System.out.println("EXCEPTION JAVA : Fichier non trouvÃ© !!!" + ex.getMessage() + "'");
 			d = new Dessin();
 		}
 

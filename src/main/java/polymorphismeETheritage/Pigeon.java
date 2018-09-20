@@ -9,7 +9,7 @@ public class Pigeon extends Oiseau{
 	}
 	
 	public void seDeplace() {
-		System.out.println("Déplacement de pigeon");
+		System.out.println("DÃ©placement de pigeon");
 		System.out.println("Je vole et trottine");
 		System.out.println("");
 	}

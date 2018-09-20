@@ -9,7 +9,7 @@ public class Chien extends Animal{
 	}
 	
 	public void seDeplace() {
-		System.out.println("Déplacement de chien : ");
+		System.out.println("DÃ©placement CHIEN : ");
 		System.out.println("Je gambade");
 		System.out.println("");
 	}

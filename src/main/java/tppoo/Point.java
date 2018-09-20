@@ -39,7 +39,7 @@ public class Point implements Cloneable, Serializable {
 	
 	@Override
 	public String toString() {
-		return getType() + "[L'abscisse est égale à : " + x + " et l'ordonnée est égale à : " + y + "]" ;
+		return getType() + "[L'abscisse est Ã©gale Ã  : " + x + " et l'ordonnÃ©e est Ã©gale Ã  : " + y + "]" ;
 		
 	}
 	
