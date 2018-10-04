@@ -1,3 +1,4 @@
+package app;
 
 
 import java.io.File;
@@ -20,7 +21,7 @@ import tppoo.Segment;
 public class MainVaultTec {
 
 	@SuppressWarnings("unused")
-	public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
+	public static void start() throws InterruptedException {
 
 		// VARIABLES UTILISES PAR LE PROGRAMME
 		Scanner sc = new Scanner(System.in); // Creation objet scanner pour capture clavier
