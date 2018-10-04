@@ -1,0 +1,15 @@
+Connection conn = DriverManager.getConnection(url, username, password) 
+
+Statement stmt = conn.createStatement() 
+_ stmt.executeQuery(sql); 
+_ stmt.executeUpdate(sql); 
+
+PreparedStatement stmt = conn.prepareStatement("sql avec les paramètres (?, ?)...");
+_ stmt.setString(parameterIndex, value); 
+_ stmt.executeQuery() ou stmt.executeUpdate() 
+_ stmt.executeUpdate(<query>, Statement.RETURN_GENERATED_KEYS); 
+_ stmt.addBatch() puis stmt.executeBatch() 
+
+conn.setAutoCommit(false) 
+_ conn.commit() 
+_ conn.rollback()
